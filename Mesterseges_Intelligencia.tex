@@ -1,0 +1,106 @@
+\documentclass{article}
+
+
+\begin{document}
+	
+	\title{Mesterséges Intelligencia}
+	\author{Vass Miklós Szilveszter}
+	
+	\section{AZ MI FOGALMA}
+	\subsection{Miről ismerhető fel az MI?}
+	\underline{Megoldandó feladat:} nehéz\\
+	- A feladat problématere hatalmas\\	
+	-Szisztematikus keresés helyett intuícióra, kreativitásra (azaz heurisztikára) van szükségünk ahhoz, hogy elkerljük a kombinatorikus robbanást.\\
+	\underline{Szoftver viselkedése:} intelligens (tárol ismeretet, automatikusan következtet, tanul, gépi látás, gépi cselekvés)\\
+	-Turing teszt vs. kínai szoba elmélet\\
+	-"mesterjelölt szintű" mesterséges intelligencia\\
+	\underline{Felhasznált eszközök:} sajátosak\\
+	-Átgondolt reprezentáció a feladat modellezéséhez\\
+	-Heurisztikával megerősített hatékony algoritmusok\\
+	-Gépi tanulás módszerei\\
+	
+	\section{MODELLEZÉS ÉS KERESÉS}
+	feladat $\rightarrow$ útkeresési probléma $\rightarrow$ megoldás\\
+	Feladat és útkeresési probléma között helyezkedik el a modellezés. Itt található az állapottér-reprezentáció, a probléma dekompozíció, a korlátprogramozási modell, és a logikai reprezentáció.\\
+	Az útkeresési problémát egy gráffal reprezentálhatjuk.
+	Az útkeresési probléma és a megoldás között található a keresés. A keresésbe tartoznak a lokális keresések, a visszalépéses keresések, a gráfkeresések, az evolúciós algoritmus, a rezolúció és a szabályalapú következtetés.\\
+	
+	\subsection{Mire kell a modellezésnek fókuszálni}
+	Problématér elemei: probléma lehetséges válaszai.\\
+	Cél: egy helyes válasz (megoldás) megtalálása\\
+	Keresést segítő ötletek (heurisztikák): \\
+	-Problématér hasznos elemeinek elválasztása a haszontalanoktól.\\
+	-Az elemek szomszédsági kapcsolatainak kijelölése, hogy a probléma tér elemeinek szisztematikus bejárását segítsük.\\
+	-Adott pillanatban elérhető elemek rangsorolása.\\
+	-Kiinduló elem kijelölése.\\
+	
+	\subsection{Útkeresési probléma}
+	Egy útkeresési problémában a problématér elemeit egy olyan élsúlyozott irányított gráf csúcsai vagy útjai szimbolizálják, amelyik gráf nem feltétlenül véges, de a csúcsainak kifoka véges, és van egy közös pozitív alsó korlátja az élek súlyának (költségének) ($\delta$-gráf).\\
+	A megoldást ennek megfelelően vagy egy célcsúcs, vagy egy startcsúcsból célcsúcsba vezető út (esetleg a legolcsóbb ilyen) megtalálása szolgáltatja.\\
+	Számos olyan modellező módszert ismerünk, amely a kitűzött feladatot útkeresési problémává fogalmazza át.
+	
+	\subsection{Gráf fogalmak}
+	-csúcsok, irányított élek:$\rightarrow$ N, A $\subseteq$ NxN\\
+	-él n-ből m-be $\rightarrow$ (n,m) $\in$ A (n,m $\in$ N)\\
+	-n utódai $\rightarrow$ $\gamma$ (n) = $\{$ m $\in$ N $\mid$ (n,m) $\in$ A $\}$\\
+	-n szülei $\rightarrow$ $\pi$(n) $\in$ $\Pi$(n) = $\{$ m $\in$ N $\mid$ (m,n) $\in$ A $\}$\\
+	-irányított gráf $\rightarrow$ R=(N,A)\\
+	-véges sok kivezető él $\rightarrow$ $\mid$ $\gamma$ (n) $\mid$ $<$ $\infty$ ($\forall$ n $\in$ N)\\
+	-élköltség $\rightarrow$ c:A $\rightarrow$ ${\rm I\!R}$\\
+	-$\delta$ tulajdonság ($\delta$$\in$${\rm I\!R^+}$) $\rightarrow$ c(n,m) $\geq$ $\delta$ $>$ 0 ($\forall$(n,m)$\in$A)\\
+	-$\delta$-gráf $\rightarrow$ $\delta$-tulajdonságú, véges sok kivezető élű, élsúlyozott irányított gráf\\
+	-irányított út $\rightarrow$ $\alpha$ = (n,$n_1$),($n_1$,$n_2$),...,(n$\textsubscript{k-1}$,m) = $<$n,$n_1$,$n_2$,...,n$\textsubscript{k-1}$,m$>$ n$\rightarrow$$\textsuperscript{$\alpha$}$m, n$\rightarrow$ m, n$\rightarrow$M (M $\subseteq$ N) {n$\rightarrow$m}, {n$\rightarrow$M}\\
+	-út hossza $\rightarrow$ az út éleinek száma: $|$$\alpha$$|$\\
+	-út költsége $\rightarrow$ c($\alpha$)=c$\textsuperscript{$\alpha$}$(n,m) :=  $\sigma$$\textsubscript{j=1..k}$c(n$\textsubscript{j-1}$,$n_j$) ha $\alpha$ = $<$n=$n_0$,$n_1$,$n_2$,...,n$\textsubscript{k-1}$,m=$n_k$$>$\\
+	-opt. költség $\rightarrow$ c*(n,m):=min$\textsubscript{$\alpha$ $\in$ $\{$ n $\rightarrow$ m $\}$ }$c$\textsuperscript{$\alpha$}$(n,m) $\{$$\delta$ gráfokban ez végtelen sok út esetén is értelmes. Értéke $\infty$, ha nincs egy út se.$\}$ \\
+	-opt. költség2 $\rightarrow$ c*(n,M):=min$\textsubscript{$\alpha$ $\in$ $\{$ n $\rightarrow$ m $\}$ }$c$\textsuperscript{$\alpha$}$(n,M) \\
+	-opt. költségű út n$\rightarrow$*m :=$min_c$$\{$$\alpha$$|$ $\alpha$$\in$$\{$n$\rightarrow$m$\}$ $\}$ \\
+	-opt. költségű út n$\rightarrow$*M :=$min_c$$\{$$\alpha$$|$ $\alpha$$\in$$\{$n$\rightarrow$M$\}$ $\}$ \\
+	
+	\subsection{Gráfreprezentáció fogalma}
+	Minden útkeresési probléma rendelkezik egy (a probléma modellezéséből származó) gráfreprezentációval, ami egy (R,s,T) hármas, amelyben:\\
+	-R=(N,A,c) $\delta$-gráf az ún. reprezentációs gráf,\\
+	-az s$\in$N startcsúcs,\\
+	-a T$\subseteq$N halmazbeli célcsúcsok.\\
+	És a probléma megoldása:\\
+	-egy t$\in$T cél megtalálása, vagy\\
+	-egy s$\rightarrow$T, esetleg s$\rightarrow$*T optimális út megtalálása\\
+	(s-ből Tegyik csúcsába vezető irányított út, vagy s-ből T egyik csúcsába vezető legolcsóbb irányított út)\\
+	Az útkeresési problémák megoldásáshoz azok a reprezentációs gráfjainak nagy mérete miatt speciális (nem determinisztikus, heurisztikus) útkereső algoritmusokra van szükség, amelyek:\\
+	-a startcsúcsból indulnak, amely az első aktuális csúcs;\\
+	-minden lépésben nem-determinisztikus módon új aktuális csúcso(ka)t választanak a korábbi aktuális csúcs(ok) alapján (gyakran azok gyerekei közül);\\
+	-tárolják a már feltárt reprezentációs gráf egy részét;\\
+	-megállnak, ha célcsúcsot találnak vagy nyilvánvalóvá válik, hogy erre semmi esélyük.\\
+	
+	\subsection{Kereső rendszer (KR)}
+	Procedure KR\\
+	1. ADAT:= kezdeti érték\\
+	2. while !terminálási feltétel(ADAT) loop\\
+	3. \quad SELECT SZ FROM alkalmazható szabályok\\
+	4. \quad ADAT := SZ(ADAT)\\
+	5. endloop\\
+	end\\
+	AHOL:\\
+	-ADAT: globális munkaterület, tárolja a keresés során megszerzett és megőrzött ismeretet\\
+	-alkalmazható szabályok: keresési szabályok, megváltoztatják a globális munkaterület tartalmát\\
+	-SELECT: vezérlési stratégia, alkalmazható szabályok közül kiválaszt egy "megfelelőt"
+	
+	\subsection{Kereső rendszerek vizsgálata}
+	-helyes-e (azaz korrekt választ ad-e)\\
+	-teljes-e (minden esetben választ ad-e)\\
+	-optimális-e(optimális megoldást ad-e)\\
+	-idő bonyolultság\\
+	-tár bonyolultság\\
+	
+	\section{GÉPI TANULÁS}
+	-Egy programozási feladat megoldásához meg kell adnunk a feladat modelljét és készítenünk kell egy ehhez illeszkedő algoritmust, amely a feladat megoldását előállítja.\\
+	-Gépi tanulással a modell (reprezentáció és/vagy heurisztika), illetve a megoldó algoritmus (többnyire annak bizonyos paraméterei) állhatnak elő automatikusan.\\
+	-A tanuláshoz a megoldandó probléma néhány konkrét esetére, a tanító példákra van szükség.\\
+	-A gépi tanulási módszereket három csoportba szokás sorolni: felügyelt-, nem-felügyelt, és megerősítéses tanulásra attól függően, hogy a tanító példák input-output párok, csak inputok, vagy input-hasznosság párok.\\
+	
+	
+		
+\end{document}
+
+
+
