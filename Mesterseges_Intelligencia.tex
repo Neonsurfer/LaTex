@@ -98,6 +98,75 @@
 	-A tanuláshoz a megoldandó probléma néhány konkrét esetére, a tanító példákra van szükség.\\
 	-A gépi tanulási módszereket három csoportba szokás sorolni: felügyelt-, nem-felügyelt, és megerősítéses tanulásra attól függően, hogy a tanító példák input-output párok, csak inputok, vagy input-hasznosság párok.\\
 	
+	\section{Állapottér-reprezentáció}
+	\underline{Állapottér}: a probléma leírásához szükséges adatok által felvett érték-együttesek (azaz állapotok) halmaza\\
+	-az állapot többnyire egy összetett szerkezetű érték\\
+	-gyakran egy bővebb alaphalmazzal és egy azon értelmezett invariáns állítással definiáljuk\\
+	\underline{Múveletek}: állapotból állapotba vezetnek.\\
+	-megadásukhoz: előfeltétel és hatás leírása\\
+	-invariáns tulajdonságot tartó leképezés\\
+	\underline{Kezdőállapot(ok)} vagy azokat leíró kezdeti feltétel\\
+	\underline{Végállapot(ok)} vagy célfeltétel
+	
+	\subsection{Hanoi tornyai probléma}
+	
+	\underline{Állapottér:}
+	AT=$\{$1,2,3$\}$\textsuperscript{n}\\
+	megjegyzés: a tömb i-dik eleme mutatja az i-dik korong rúdjának számát, a korongok a rudakon méretük szerint fentről lefelé növekvő sorban vannak.\\	
+	\underline{Művelet:}Rak(honnan,hova): AT$\rightarrow$AT honnan, hova $\in$ \{1,2,3\}\\
+	HA a honnan és hova \underline{létezik} és \underline{nem azonos}, és \underline{van korong} a honnan rúdon, és a hova rúd \underline{üres} vagy a mozgatandó korong (honnan rúd felső korongja) \underline{kisebb}, mint a hova rúd felső korongja, AKKOR this[honnan legfelső korongja] := hova
+	
+	\subsection{Állapottér-reprezentáció gráf-reprezentációja}
+	\underline{$\delta$-gráf} ~ állapot-gráf\\
+	-csúcs: állapot\\
+	-irányított él: művelet hatása\\
+	-élköltség: művelet költsége\\
+	\underline{startcsúcs} ~ kezdőállapot\\
+	\underline{célcsúcsok} ~ végállapotok\\
+	\underline{irányított út} ~ egy műveletsorozat hatása\\
+	
+	\subsection{Állapottér vs. problématér}
+	-Az állapottér-reprezentáció és a problématér között szoros kapcsolat áll fenn, de az állapottér többnyire nem azonos a problématérrel.\\
+	-A problématér elemeit többnyire nem az állapotok, hanem a startcsúcsból induló különböző hosszúságú irányított utak.\\
+	\hspace*{1em} -A hanoi tornyai problémánál például egy megoldást egy irányított út\\ \hspace*{1em} szimbolizál, amelyik a startcsúcsból a célcsúcsba vezet.\\
+	\hspace*{1em} -Van amikor a megoldás egyetlen álapot (azaz csúcs), de ebben az esetben is\\ \hspace*{1em} kell találni egy odavezető operátor-sorozatot (azaz irányított utat).
+	 
+	 \subsection{Állapot-gráf bonyolultsága}
+	 Állapot-gráf bonyolultsága $\rightarrow$ Problématér mérete $\rightarrow$ Keresés számításigénye\\ \\
+	 A bonyolultság elsősorban a start csúcsból kivezető utak száma az oda-vissza lépések nélkül, amely nyilván függvénye a\\
+	 \hspace*{1em} -csúcsok és élek számának\\
+	 \hspace*{1em} -csúcsok ki-fokának\\
+	 \hspace*{1em} -körök gyakoriságának, és hosszuk sokféleségének\\ \\
+	 Ugyanannak a feladatnak több modellje lehet: érdemes olyat keresni, amely kisebb problémateret jelöl ki.\\
+	 \hspace*{1em} -Az előző reprezentációnál a problématér mérete, azaz a lehetséges utak \\ \hspace*{1em}száma, óriási. Készítsünk jobb modellt!\\
+	 \hspace*{1em}-Bővítsük az állapotteret, és használjunk új műveletet!\\
+	 \hspace*{1em}-Műveletek előfeltételének szigorításával csökken az állapot-gráf átlagos ki-foka.
+	 
+	 \subsection{Művelet végrehajtásának hatékonysága}
+	 A művelet kiszámítási bonyolultsága csökkenthető, ha az állapotokat extra információval egészítjük ki, vagy az invariáns szigorításával szűkítjük az állapotteret. \\ 
+	 
+	 \subsection{Hogyan "látja" egy keresés a reprezentációs gráfot?}
+	 Egy keresés fokozatosan fedezi fel a reprezentációs gráfot:
+	 bizonyos részeihez soha nem jut el, de a felfedezett részt sem feltétlenül tárolja el teljesen, sőt, sokszor torzultan "látja" azt: ha például egy csúcshoz érve nem vizsgálja meg, hogy ezt korábban már felfedezte-e, hanem új csúcsként regisztrálja, akkor az eredeti gráf helyett egy fát fog tárolni.
+	 
+	 \subsection{Reprezentációs gráf "fává egyenesítése"}
+	 Ha a keresés nem vizsgálja meg egy csúcsról, hogy korábban már felfedezte-e, akkor az eredeti reprezentációs gráf helyett annak fává kiegyenesített változatában keres.\\
+	 Előny: eltűnnek a körök, de a megoldási utak megmaradnak.\\
+	 Hátrány: duplikátumok jelennek meg, sőt a körök kiegyenesítése végtelen hosszú utakat eredményez.\\
+	 A kétirányú (oda-vissza) élek szörnyen megnövelik a kiegyenesítéssel kapott fa méretét. De bármelyik keresésnél eltárolhatjuk egy csúcsnak azt a szülőcsúcsát, amelyik felől a csúcsot elértük. Így egy csúcsból a szülőjébe visszavezető él könnyen felismerhető és figyelmen kívül hagyható.
+	 
+	 \section{Probléma dekompozíció}
+	 Egy probléma dekomponálása során a problémát részproblémákra bontjuk, majd azokat tovább részletezzük, amíg nyilvánvalóan megoldható problémákat nem kapunk.\\
+	 Sokszor egy probléma megoldását akár többféleképpen is fel lehet bontani részproblémák megoldásaira.
+	 
+	 \subsection{Dekompozíciós reprezentáció fogalma}
+	 A reprezentációhoz meg kell adnunk:\\
+	 -a feladat részproblémáinak általános leírását\\
+	 -a kiinduló problémát\\
+	 -az egyszerű problémákat, amelyekről könnyen eldönthető, hogy megoldhatók-e vagy sem\\
+	 -a dekomponáló műveleteket:\\
+	 \hspace*{1em}D: probléma $\rightarrow$ probléma$\textsuperscript{+}$\\
+	 \hspace*{1em}D(p)= $<$p$\textsubscript{1}$,...,p$\textsubscript{n}$$>$
 	
 		
 \end{document}
