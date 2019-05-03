@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  3 MAY 2019 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  3 MAY 2019 14:08
 entering extended mode
 **./Mesterseges_Intelligencia.tex
 (Mesterseges_Intelligencia.tex
@@ -197,7 +197,18 @@ Overfull \hbox (3.13965pt too wide) in paragraph at lines 172--181
 k meg egy problemat. 
  []
 
-[6] (Mesterseges_Intelligencia.aux) ) 
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Overfull \hbox (1.90341pt too wide) in paragraph at lines 216--218
+\OT1/cmr/m/n/10 bejarasok olyan kozonseges iranytott utak, ame-lyek cs
+ucsai az ere-deti []ES/VAGY
+ []
+
+[7] (Mesterseges_Intelligencia.aux) ) 
 Here is how much of TeX's memory you used:
  240 strings out of 492945
  3105 string characters out of 3126252
@@ -205,7 +216,7 @@ Here is how much of TeX's memory you used:
  4219 multiletter control sequences out of 15000+200000
  4850 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,5n,18p,369b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,8n,18p,605b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/mvass/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mvass/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mvass/
@@ -215,9 +226,9 @@ r10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Mesterseges_Intelligencia.pdf (6 pages, 106041 bytes).
+Output written on Mesterseges_Intelligencia.pdf (7 pages, 109522 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

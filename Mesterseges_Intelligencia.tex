@@ -189,6 +189,32 @@
 	 3. (0$<$$\delta$$\leq$c(n,M))
 	 
 	 \subsection{Megoldás-gráf}
+	 Az eredeti problémát egyszerű problémákra visszavezető dekomponálási folyamatot az ÉS/VAGY gráf speciális részgráfja, az ún. megoldás-gráf jeleníti meg, amelyben:\\
+	 \hspace*{1em} -szerepel a startcsúcs\\
+	 \hspace*{1em} -a startcsúcsból minden más csúcsba vezet út, és minden csúcsból vezet út\\
+	 \hspace*{1em} egy megoldás-gráfbeli célcsúcsba\\
+	 \hspace*{1em} -egy éllel együtt az összes azzal "ÉS" kapcsolatban álló él is (azaz a teljes\\
+	 \hspace*{1em} élköteg) része a megoldás-gráfnak\\
+	 \hspace*{1em} -nem tartalmaz "VAGY" kapcsolatban álló él párokat\\
+	 A megoldás a megoldás-gráfból olvasható ki.
+	 
+	 \subsection{Az n csúcsból az M csúcs-sorozatba vezető irányított hiper-út fogalma}
+	 Az n$\textsuperscript{$\alpha$}$$\rightarrow$M hiper-út (n$\in$N,M$\in$N$\textsuperscript{+}$) egy olyan véges részgráf, amelyben:\\
+	 \hspace*{1em}-M csúcsaiból nem indul hiper-él\\
+	 \hspace*{1em}-M-en kívüli csúcsokból csak egy hiper-él indul\\
+	 \hspace*{1em}-minden csúcs elérhető az n csúcsból egy közönséges irányított úton.\\
+	 A megoldás-gráf egy olyan hiper-út, amely a startcsúcsból csupa célcsúcsba vezet.
+	 
+	 \subsection{Hiper-út bejárása}
+	 Az n$\rightarrow$M hiper-út egy bejárásán a hiper-út csúcsaiból képzett sorozatoknak a felsorolását értjük:\\
+	 \hspace*{1em} -első sorozat: $<$n$>$\\
+	 \hspace*{1em} -a C sorozatot a C$\textsuperscript{k$\leftarrow$K}$ sorozat követi (ahol a k$\in$C, és\\
+	 \hspace*{1em} k minden C-beli előfordulásának helyén a K sorozat szerepel) feltéve, hogy a\\
+	 \hspace*{1em} hiper-útnak van olyan (k,K) hiper-éle, ahol k$\notin$M.\\
+	 
+	 \subsection{Útkeresés ÉS/VAGY gráfban}
+	 Amikor a startcsúcsból induló hiper-utakat (ezek között vannak a megoldás-gráfok is, ha egyáltalán vannak ilyenek) a bejárásukkal írjuk le, akkor ezek a bejárások olyan közönséges irányított utak, amelyek csúcsai az eredeti ÉS/VAGY gráf csúcsainak sorozatai. Ezen utakból egy olyan közönséges irányított gráfot készíthetünk, amelyben a startcsúcs az ÉS/VAGY gráf startcsúcsából álló egy elemű sorozat, a célcsúcsait leíró sorozatok pedig kizárólag az ÉS/VAGY gráf célcsúcsainak egy részét tartalmazzák.\\
+	 Ha ebben a közönséges gráfban megoldási utat találunk, akkor az egyben az eredeti ÉS/VAGY gráf megoldás-gráfja is lesz.
 	 
 	 
 	 
