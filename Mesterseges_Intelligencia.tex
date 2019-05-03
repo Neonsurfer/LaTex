@@ -171,7 +171,27 @@
 	 \subsection{A dekompozíció modellezése ÉS/VAGY gráffal}
 	 Egy dekompozíciót egy ún. ÉS/VAGY gráffal szemléltetjük:
 	 -egy csúcs egy részproblémát jelöl, a startcsúcs a kiinduló problémát, a célcsúcsok a megoldható egyszerű problémákat.
-	 -egy élköteg egy dekomponáló művelet hatását írja le, és a dekomponált probléma csúcsából a dekomponálással előállított részproblémák csúcsaiba vezet.
+	 -egy élköteg egy dekomponáló művelet hatását írja le, és a dekomponált probléma csúcsából a dekomponálással előállított részproblémák csúcsaiba vezet.\\
+	 \hspace*{1em}- egy élköteg élei mutatják meg, hogy a dekomponált probléma megoldásához\\
+	 \hspace*{1em}  mely részproblémákat kell megoldani. Az élköteg élei között ezért ún. "ÉS"\\
+	 \hspace*{1em}  kapcsolat van: hiszen minden részproblémát meg kell oldani.\\
+	 \hspace*{1em}- egy csúcsból több élköteg is indulhat, ha egy probléma többféleképpen\\
+	 \hspace*{1em} dekomponálható. Ezen élkötegek élei között ún. "VAGY" kapcsolat áll fenn:\\
+	 \hspace*{1em} hiszen választhatunk, hogy melyik élköteg mentén oldjunk meg egy problémát.
+	 
+	 \subsection{ÉS/VAGY gráfok}
+	 1. AZ R=(N,A) élsúlyozott irányított hiper-gráf, ahol az\\
+	 \hspace*{1em}-N a csúcsok halmaza\\
+	 \hspace*{1em}-A $\subseteq$ \{ (n,M)$\in$ NxN$\textsuperscript{+}$ $|$ 0$\neq$$|$M$|$ $<$ $\infty$ \} a hiper-élek halmaza, $|$M$|$ a hiper-él\\
+	 \hspace*{1em} rendje\\
+	 \hspace*{1em}-(c(n,M) az (n,M) költsége)\\
+	 2. Egy csúcsból véges sok hiper-él indulhat\\
+	 3. (0$<$$\delta$$\leq$c(n,M))
+	 
+	 \subsection{Megoldás-gráf}
+	 
+	 
+	 
 	
 		
 \end{document}

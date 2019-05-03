@@ -1,0 +1,223 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  3 MAY 2019 13:49
+entering extended mode
+**./Mesterseges_Intelligencia.tex
+(Mesterseges_Intelligencia.tex
+LaTeX2e <2018-12-01>
+("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (Mesterseges_Intelligencia.aux)
+\openout1 = `Mesterseges_Intelligencia.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 11.
+
+Overfull \hbox (10.80624pt too wide) in paragraph at lines 11--21
+[]$ \OT1/cmr/m/n/10 in-tel-li-gens (tarol is-meretet, au-tomatiku-san kovetke
+ztet, tanul,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--21
+
+ []
+
+
+Overfull \hbox (4.58405pt too wide) in paragraph at lines 23--27
+\OT1/cmr/m/n/10 az allapotter-reprezentacio, a problema dekom-pozcio, a
+ korlatprogramozasi mod-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--36
+
+ []
+
+
+Overfull \hbox (6.55624pt too wide) in paragraph at lines 38--41
+\OT1/cmr/m/n/10 Egy utkeresesi problemaban a problemater el-e-meit egy ol
+yan elsulyozott iranytott
+ []
+
+
+Overfull \hbox (11.52727pt too wide) in paragraph at lines 38--41
+\OT1/cmr/m/n/10 A megoldast en-nek megfelel}oen vagy egy celcsucs, vagy egy 
+startcsucsbol celcsucsba
+ []
+
+
+Overfull \hbox (2.52846pt too wide) in paragraph at lines 38--41
+\OT1/cmr/m/n/10 Szamos olyan mod-ellez}o modszert is-merunk, amely a kit}uz
+ott fe-lada-tot utkeresesi
+ []
+
+[1
+
+{C:/Users/mvass/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (23.78601pt too wide) in paragraph at lines 43--59
+\OT1/cmr/m/n/10 -ut koltsege $\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 c($\OML/cm
+m/m/it/10 $\OT1/cmr/m/n/10 )=c$[]$(n,m) := $\OML/cmm/m/it/10 $$[]$\OT1/cmr/m/
+n/10 c(n$[]$,$\OML/cmm/m/it/10 n[]$\OT1/cmr/m/n/10 ) ha $\OML/cmm/m/it/10 $ \O
+T1/cmr/m/n/10 = $\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 n=$\OML/cmm/m/it/10 n[]$\OT
+1/cmr/m/n/10 ,$\OML/cmm/m/it/10 n[]$\OT1/cmr/m/n/10 ,$\OML/cmm/m/it/10 n[]$\OT1
+/cmr/m/n/10 ,...,n$[]$,m=$\OML/cmm/m/it/10 n[]$$>$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--59
+
+ []
+
+
+Overfull \hbox (9.80617pt too wide) in paragraph at lines 61--74
+\OT1/cmr/m/n/10 Minden utkeresesi problema ren-delkezik egy (a problema mod
+-ellezeseb}ol szarmazo)
+ []
+
+
+Overfull \hbox (8.47295pt too wide) in paragraph at lines 61--74
+\OT1/cmr/m/n/10 -minden lepesben nem-determinisztikus modon uj aktualis cs
+ucso(ka)t valasztanak
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--74
+
+ []
+
+[2]
+Overfull \hbox (21.66748pt too wide) in paragraph at lines 76--87
+\OT1/cmr/m/n/10 -alkalmazhato szabalyok: keresesi szabalyok, megvaltoztatj
+ak a globalis munkaterulet
+ []
+
+
+Overfull \hbox (25.63963pt too wide) in paragraph at lines 76--87
+\OT1/cmr/m/n/10 -SELECT: vezerlesi strategia, al-ka-lmazhato szabalyok ko
+zul kivalaszt egy "megfelel}ot" 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--100
+
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
+
+ ("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--144
+
+ []
+
+[4]
+Overfull \hbox (8.38968pt too wide) in paragraph at lines 146--147
+\OT1/cmr/m/n/10 formacioval egesztjuk ki, vagy az in-varians szigorta
+saval sz}uktjuk az allapotteret. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Overfull \hbox (7.4729pt too wide) in paragraph at lines 153--157
+\OT1/cmr/m/n/10 akkor az ere-deti reprezentacios graf helyett an-nak fava 
+ki-egyenestett valtozataban
+ []
+
+
+Overfull \hbox (0.69524pt too wide) in paragraph at lines 159--161
+\OT1/cmr/m/n/10 Egy problema dekom-ponalasa soran a problemat reszprobl
+emakra bon-tjuk, majd
+ []
+
+
+Overfull \hbox (33.6952pt too wide) in paragraph at lines 159--161
+\OT1/cmr/m/n/10 Sokszor egy problema megoldasat akar tobbfelekeppen is f
+el lehet bon-tani reszproblemak
+ []
+
+[5]
+Overfull \hbox (3.13965pt too wide) in paragraph at lines 172--181
+|  \OT1/cmr/m/n/10 hiszen valaszthatunk, hogy melyik elkoteg menten old-jun
+k meg egy problemat. 
+ []
+
+[6] (Mesterseges_Intelligencia.aux) ) 
+Here is how much of TeX's memory you used:
+ 240 strings out of 492945
+ 3105 string characters out of 3126252
+ 67254 words of memory out of 3000000
+ 4219 multiletter control sequences out of 15000+200000
+ 4850 words of font info for 18 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,5n,18p,369b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/mvass/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mvass/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mvass/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Mesterseges_Intelligencia.pdf (6 pages, 106041 bytes).
+PDF statistics:
+ 49 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
