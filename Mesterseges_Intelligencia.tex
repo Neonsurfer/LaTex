@@ -271,11 +271,11 @@
 	 A keresési szabály a következő csúcsot véletlenszerűen választja ki az aktuális (akt) csúcs gyermekei közül.\\
 	 Ha az így kiválasztott új csúcs kiértékelő függvény-értéke nem rosszabb, mint az akt csúcsé (itt f(új) $\leq$ f(akt)), akkor elfogadjuk aktuális csúcsnak.\\
 	 Ha az új csúcs függvényértéke rosszabb (itt f(új) $>$ f(akt)), akkor egy olyan véletlenített módszert alkalmazunk, ahol az új csúcs elfogadásának valószínűsége fordítottan arányos az $|$ f(akt) - f(új) $|$ különbséggel: \\
-	 $e^\frac{f(akt)-f(új)}{T}$ > random[0,1] \\
+	 $e^\frac{f(akt)-f(uj)}{T}$ $>$ random[0,1] \\
 	 
 	 \subsection{Hűtési ütemterv}
 	 Egy csúcs elfogadásának valószínűségét az elfogadási képlet kitevőjének T együtthatójával szabályozhatjuk. Ezt egy (T$\textsubscript{k}$,L$\textsubscript{k}$) k=1,2,... ütemterv vezérli, amely L$\textsubscript{1}$, majd L$\textsubscript{2}$ lépésen keresztül T$\textsubscript{2}$, stb. lesz.\\
-	 e^\frac{f(current)-f(new)}{T_k} > rand[0,1]\\
+	 $e^\frac{f(current)-f(new)}{T_k}$ $>$ rand[0,1]\\
 	 Ha $T_1$, $T_2$, ... szigorúan monoton csökken, akkor egy ugyanannyival rosszabb függvényértékű új csúcsot kezdetben nagyobb valószínűséggel fogad el a keresés, mint később.
 	 
 	 \subsection{Lokális kereséssel megoldható feladatok}

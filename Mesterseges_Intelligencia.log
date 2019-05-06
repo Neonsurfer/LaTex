@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  6 MAY 2019 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  6 MAY 2019 11:15
 entering extended mode
 **./Mesterseges_Intelligencia.tex
 (Mesterseges_Intelligencia.tex
@@ -263,47 +263,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--269
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 274.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.274 	 $e^\frac{f(akt)-f(új)}{T}
-                                  $ > random[0,1] \\
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.274 	 $e^\frac{f(akt)-f(új)}{T}
-                                  $ > random[0,1] \\
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex10!
-
 Underfull \hbox (badness 10000) in paragraph at lines 271--275
 
  []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.278 	 e^
-          \frac{f(current)-f(new)}{T_k} > rand[0,1]\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.279 	 Ha $T_
-              1$, $T_2$, ... szigorúan monoton csökken, akkor egy ugyanann...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
 
 Overfull \hbox (39.63861pt too wide) in paragraph at lines 277--280
@@ -333,7 +295,7 @@ ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mvass/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Use
 rs/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb>
-Output written on Mesterseges_Intelligencia.pdf (10 pages, 144547 bytes).
+Output written on Mesterseges_Intelligencia.pdf (10 pages, 142991 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
