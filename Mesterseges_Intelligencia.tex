@@ -289,6 +289,23 @@
 	 \subsection{A heurisztika hatása a KR működésére}
 	 A heurisztika olyan, a feladathoz kapcsolódó ötlet, amelyet közvetlenül építünk be egy algoritmusba azért, hogy annak eredményessége és hatékonysága javuljon ( egyszerre képes javítani a futási időt és a memóriaigényt), habár erre általában semmiféle garanciát nem ad.
 	 
+	 \section{Visszalépéses keresés}
+	 A visszalépéses keresés egy olyan KR, amely:\\
+	 \hspace*{1em} -globális munkaterülete:\\
+	 \hspace*{2em} egy út a startcsúcsból az aktuális csúcsba (ezen kívül az útról leágazó \\
+	 \hspace*{2em} még ki nem próbált élek)\\
+	 \hspace*{3em} kezdetben a startcsúcsot tartalmazó nulla hosszúságú út\\
+	 \hspace*{3em} terminálás célcsúccsal vagy startcsúcsból való visszalépéssel\\
+	 \hspace*{1em} -keresés szabályai:\\
+	 \hspace*{2em} a nyilvántartott út végéhez egy új (ki nem próbált) él hozzáfűzése, vagy\\
+	 \hspace*{2em} a legutolsó él törlése (visszalépés szabálya)\\
+	 \hspace*{1em} -vezérlés stratégiája a visszalépés szabályát csak a legvégső esetben\\
+	 \hspace*{1em}  alkalmazza\\
+	 
+	 \subsection{Visszalépés feltételei}
+	 
+	 
+	 
 	 
 	
 		
