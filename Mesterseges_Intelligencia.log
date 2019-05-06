@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  3 MAY 2019 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  6 MAY 2019 09:15
 entering extended mode
 **./Mesterseges_Intelligencia.tex
 (Mesterseges_Intelligencia.tex
@@ -208,7 +208,88 @@ Overfull \hbox (1.90341pt too wide) in paragraph at lines 216--218
 ucsai az ere-deti []ES/VAGY
  []
 
-[7] (Mesterseges_Intelligencia.aux) ) 
+
+Overfull \hbox (10.19518pt too wide) in paragraph at lines 223--229
+\OT1/cmr/m/n/10 -heurisztikus (a fe-la-dattol szarmazo, an-nak mod-elljeben
+ nem rogztett, a megoldast 
+ []
+
+[7]
+Overfull \hbox (21.63956pt too wide) in paragraph at lines 235--239
+\OT1/cmr/m/n/10 csucsat (aktualis csucs) es an-nak sz}uk kornyezetet ta
+rolja (a globalis munkateruleten). 
+ []
+
+
+Overfull \hbox (10.80612pt too wide) in paragraph at lines 241--252
+\OT1/cmr/m/n/10 Csak er}os heurisztika eseten lesz sik-eres: kulonben "elte
+ved" (nem talal megoldast),
+ []
+
+
+Overfull \hbox (5.02847pt too wide) in paragraph at lines 241--252
+\OT1/cmr/m/n/10 Lokalis op-ti-mum hely korul vagy ek-vidis-z-tans feluleten
+ (azonos ertek}u szomszedos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--252
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 254--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--269
+
+ []
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 274.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.274 ...xtsuperscript{$\frac{f(akt) -f(új)}{T}$}
+                                                  $ $>$ random[0,1] \\
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.274 ...xtsuperscript{$\frac{f(akt) -f(új)}{T}$}
+                                                  $ $>$ random[0,1] \\
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--275
+
+ []
+
+[9] (Mesterseges_Intelligencia.aux) ) 
 Here is how much of TeX's memory you used:
  240 strings out of 492945
  3105 string characters out of 3126252
@@ -220,15 +301,19 @@ Here is how much of TeX's memory you used:
 <C:/Users/mvass/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mvass/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mvass/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/
 Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Mesterseges_Intelligencia.pdf (7 pages, 109522 bytes).
+mi7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mvass/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mvass/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/mv
+ass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+
+Output written on Mesterseges_Intelligencia.pdf (9 pages, 139251 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

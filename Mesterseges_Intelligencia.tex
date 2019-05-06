@@ -217,6 +217,62 @@
 	 Ha ebben a közönséges gráfban megoldási utat találunk, akkor az egyben az eredeti ÉS/VAGY gráf megoldás-gráfja is lesz.
 	 
 	 
+	 \section{Keresések}
+	 
+	 \subsection{KR vezérlési szintjei}
+	 Három féle vezérlési stratégiát különböztetünk meg:\\
+	 -általános (független a feladattól, és annak modelljétől: nem merít sem a feladat\\ \hspace*{0,2em}ismereteiből, sem a modell sajátosságaiból.)\\
+	 -modellfüggő (nem függ a feladat ismereteitől, de épít a feladat modelljének\\
+	 \hspace*{0,2em} általános elemeire.)\\
+	 -heurisztikus (a feladattól származó, annak modelljében nem rögzített, a megoldást\\
+	 \hspace*{0,2em} segítő speciális ismeret)
+	 
+	 Másik megközelítés alapján, kétféle általános stratégiát különböztetünk meg:\\
+	 -nemmódosítható (lokális keresések, evolúciós algoritmus, rezolúció)\\
+	 -módosítható (visszalépéses keresések, gráfkeresések)
+	 
+	 \subsection{Lokális keresések}
+	 A lokális keresés olyan KR, amely a probléma reprezentációs gráfjának egyetlen csúcsát (aktuális csúcs) és annak szűk környezetét tárolja (a globális munkaterületén).\\
+	 Kezdetben az aktuális csúcs a startcsúcs, és a keresés akkor áll le, ha az aktuális csúcs a célcsúcs lesz.\\
+	 Az aktuális csúcsot minden lépésben annak környezetéből vett "jobb" csúccsal cseréli le (keresési szabály).\\
+	 A "jobbság" eldöntéséhez (vezérlési stratégia) egy kiértékelő (cél-,\\ rátermettségi-, heurisztikus) függvényt használ, amely reményeink szerint annál jobb értéket ad egy csúcsra, minél közelebb esik az a célhoz.
+	 
+	 \subsection{Hegymászó algoritmus}
+	 Mindig az aktuális (akt) csúcs legjobb gyermekére lép, amelyik lehetőleg nem a szülője.\\
+	 (Megjegyzés: Az eredeti hegymászó algoritmus nem zárja ki a szülőre való lépést, viszont nem engedi meg, hogy az aktuális csúcsot egy rosszabb értékű csúcsra cseréljük, ilyenkor inkább leáll.)\\
+	 \underline{Hátrányok:}\\
+	 Csak erős heurisztika esetén lesz sikeres: különben "eltéved" (nem talál megoldást), sőt zsákutcába jutva "beragad".\\
+	 Segíthet, ha:\\
+	 \hspace*{0,5em} -véletlenül választott startcsúcsból újra- és újra elindítjuk (random restart\\ \hspace*{1,1em}local search)\\
+	 \hspace*{0,5em} -k darab aktuális csúcs legjobb k darab gyerekére lépünk (local beam search)\\
+	 \hspace*{0,5em} -gyengítjük a mohó stratégiáját (simulated annealing)\\
+	 Lokális optimum hely körül vagy ekvidisztans felületen (azonos értékű szomszédos csúcsok között) található körön, végtelen működésbe eshet.\\
+	 Segíthet ha:\\
+	 \hspace*{0,5em} -növeljük a memóriát (tabu search)\\ \\
+	 
+	 \subsection{Tabu keresés}
+	 A globális munkaterületén az aktuális csúcson (akt) kívül nyilvántartja még:\\
+	 \hspace*{0,5em} -az utolsó néhány érintett csúcsot: Tabu halmaz\\
+	 \hspace*{0,5em} -az eddigi legjobb csúcsot: optimális csúcs (opt)\\ \\
+	 Egy keresési szabály minden lépésben\\
+	 \hspace*{0,5em} -az aktuális csúcsnak a legjobb, de nem a Tabu halmazban lévő gyerekére lép\\
+	 \hspace*{0,5em} -ha akt jobb, mint az opt, akkor opt az akt lesz\\
+	 \hspace*{0,5em} -frissíti akt-tal a sorszerkezetű Tabu halmazt\\ \\
+	 Terminálási feltételek:\\
+	 \hspace*{0,5em} -ha az opt a célcsúcs\\
+	 \hspace*{0,5em} -ha az opt sokáig nem változik \\ \\
+	 \underline{Előnyök:}\\
+	 Tabu méreténél rövidebb köröket észleli, és ez segíthet a lokális optimum hely illetve az ekvidisztans felület körüli körök leküzdésében.\\ \\
+	 \underline{Hátrányok:}
+	 A tabu halmaz méretét kísérletezéssel kell belőni. \\
+	 Zsákutcába futva nem-módosítható stratégia miatt beragad.
+	 
+	 \subsection{Szimulált hűtés}
+	 A keresési szabály a következő csúcsot véletlenszerűen választja ki az aktuális (akt) csúcs gyermekei közül.\\
+	 Ha az így kiválasztott új csúcs kiértékelő függvény-értéke nem rosszabb, mint az akt csúcsé (itt f(új) $\leq$ f(akt)), akkor elfogadjuk aktuális csúcsnak.\\
+	 Ha az új csúcs függvényértéke rosszabb (itt f(új) $>$ f(akt)), akkor egy olyan véletlenített módszert alkalmazunk, ahol az új csúcs elfogadásának valószínűsége fordítottan arányos az $|$ f(akt) - f(új) $|$ különbséggel: \\
+	 e$\textsuperscript{$\frac{f(akt) -f(új)}{T}$}$ $>$ random[0,1] \\
+	 
 	 
 	
 		
