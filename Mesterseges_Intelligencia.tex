@@ -303,6 +303,56 @@
 	 \hspace*{1em}  alkalmazza\\
 	 
 	 \subsection{Visszalépés feltételei}
+	 -Zsákutca: az aktuális csúcsból (azaz az aktuális út végpontjából) nem vezet\\
+	 \hspace*{1em} tovább él\\
+	 -Zsákutca torkolat: az aktuális csúcsból kivezető utak nem vezettek célba\\
+	 -Kör: az aktuális csúcs szerepel már korábban is az aktuális úton\\
+	 -Mélységi korlát: az aktuális út hossza elér egy előre megadott értéket
+	 
+	 \newpage
+	 \subsection{Alacsonyabb rendű vezérlési stratégiák}
+	 -A vezérlési stratégia kiegészíthető:\\
+	 \hspace*{1em} -sorrendi szabállyal: sorrendet ad az aktuális út végpontjából kivezető \\
+	 \hspace*{2em} élek (utak) vizsgálatára\\
+	 \hspace*{1em} -vágó szabállyal: megjelöli azokat az aktuális út végpontjából kivezető \\
+	 \hspace*{2em} éleket (utakat), amelyeket nem érdemes megvizsgálni\\
+	 -Ezek a szabályok lehetnek:\\
+	 \hspace*{1em} -másodlagos vezérlési stratégiák (a probléma modelljének sajátosságaiból \\
+	 \hspace*{2em} származó ötlet)\\
+	 \hspace*{1em} -heurisztikák (a probléma ismereteire támaszkodó ötlet)\\
+	 
+	 \subsection{Első változat: VL1}
+	 A visszalépéses algoritmus első változata az, amikor a visszalépés feltételei közül az első kettőt építjük be a kereső rendszerbe.\\
+	 Bebizonyítható: Véges körmentes irányított gráfokon a VL1 mindig terminál, és ha létezik megoldás, akkor talál egyet. UI: véges sok adott startból induló út van.\\
+	 Rekurzív algoritmussal (VL1) szokták megadni.
+	 
+	 \subsection{Az n-királynő probléma új reprezentációs modellje}
+	 Az előző módszerek átalakították az n-királynő probléma reprezentációját:\\
+	 \hspace*{1em} Tekintsük a $D_1$,...,$D_n$ halmazokat, ahol $D_i$={1...n} \\
+	 \hspace*{1em} (ezek az i-dik sor szabad mezői).\\
+	 \hspace*{1em} Keressük azt az ($x_1$,...,$x_n$) $\in$ $D_1$ x ... x $D_n$ elhelyezést ($x_i$ az i-dik sorban\\
+	 \hspace*{1em} elhelyezett királynő oszloppozíciója),\\
+	 \hspace*{1em} amely nem tartalmaz ütést: minden i,j királynő párra:\\
+	 \hspace*{1em} C$\textsubscript{ij}$($x_i$,$x_j$) $\equiv$ ($x_i$$\neq$$x_j$ $\bigwedge$ $|$$x_i$-$x_j$$|$$\neq$$|$i-j$|$).\\
+	 A visszalépéses keresés e modell változóinak értékeit határozza meg, miközben a bemutatott vágó módszerek egyike redukálják ezen változók $D_i$ halmazait.
+	 
+	 \subsection{Bináris korlát-kielégítési modell}
+	 Keressük azt az ($x_i$,...,$x_n$) $\in$ $D_1$ x...x$D_n$ n-est ($D_i$ véges) amely kielégít néhány C$\textsubscript{ij}$$\subseteq$ $D_i$x$D_j$ bináris korlátot.\\
+	 Példa:\\
+	 Házasságközvetítő probléma (n férfi, m nő, keressünk minden férfinak neki szimpatikus feleségjelöltet):\\
+	 \hspace*{1em} -Az i-dik férfi (i=1..n) felesége ($x_i$) a $D_i$={1,...,m} azon elemei, amelyekre fenn \\
+	 \hspace*{2em} áll, hogy szimpatikus(i,$x_i$).\\
+	 \hspace*{1em} -Az összes (i,j)-re: C$\textsubscript{ij}$($x_i$,$x_j$) $\equiv$ ($x_i$,$x_j$) (azaz nincs bigámia)
+	 
+	 \subsection{Modellfüggő vezérlési stratégia}
+	 A korábban mutatott vágó módszereket az új modellben a bináris korlátok definiálják, de a korlátok jelentésétől függetlenül. Ezek a módszerek tehát nem heurisztikák, hanem modellfüggő vágó stratégiák:\\
+	 \hspace*{1em} Töröl(i,k): $D_i$:= $D_i$- \{ e$\in$$D_i$$|$ $\neg$C$\textsubscript{ik}$(e,$x_k$)\}\\
+	 \hspace*{1em} Szűr(i,j) :$D_i$:=  $D_i$ - \{ e$\in$$D_i$ $|$ $\forall$f$\in$$D_j$:$\neg$C$\textsubscript{ij}$(e,f)\}\\
+	 Modellfüggő sorrendi stratégiák is konstruálhatók:\\
+	 \hspace*{1em} -Mindig a legkisebb tartományú még kitöltetlen komponensek válasszunk\\
+	 \hspace*{2em} előbb értéket.\\
+	 \hspace*{1em}- Ugyanazon korláthoz tartozó komponenseket lehetőleg közvetlenül egymás\\
+	 \hspace*{2em} után töltsük ki.\\
 	 
 	 
 	 
