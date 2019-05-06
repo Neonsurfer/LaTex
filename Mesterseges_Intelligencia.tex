@@ -354,6 +354,39 @@
 	 \hspace*{1em}- Ugyanazon korláthoz tartozó komponenseket lehetőleg közvetlenül egymás\\
 	 \hspace*{2em} után töltsük ki.\\
 	 
+	 \subsection{Második változat: VL2}
+	 A visszalépéses algoritmus második változata az, amikor a visszalépés feltételei közül mindet beépítjük a kereső rendszerbe.\\
+	 Bebizonyítható: A VL2 $\delta$-gráfban mindig terminál. Ha létezik a mélységi korlátnál nem hoszabb megoldás, akkor megtalál egy megoldást. UI: véges sok adott korlátnál rövidebb startból induló út van.\\
+	 Rekurzív algoritmussal (VL2) adjuk meg\\ \\
+	 1: akt := utolsó\textunderscore csúcs(út) \\
+	 2: if cél(akt) then return(nil) endif \\
+	 3: if hossza(út) $\geq$ korlát then return(hiba) endif
+	 4: if akt $\in$ maradék(út) then return(hiba) endif \\
+	 5: for $\forall$új $\in$ $\gamma$(akt) - $\pi$(akt) loop \\
+	 6: \hspace{1em} megoldás:= VL2(fűz(út,új)) \\
+	 7: \hspace{1em} if megoldás $\neq$ hiba then  \\
+	 8: \hspace{2em} return(fűz((akt,új),megoldás)) endif \\
+	 9: endloop \\
+	 10:return (hiba) \\
+	 
+	 \subsection{Mélységi korlát szerepe}
+	 A VL2 nm talál megoldást (csak terminál), ha a megadott mélységi korlátnál csak hosszabb megoldási utak vannak. \\
+	 A mélységi korlát önmagában is biztosítja a terminálást körök esetén is. \\
+	 - Ez akkor előnyös, ha nincsenek rövid körök ( a kettő hosszú köröket kiszűri a szülőcsúcs vizsgálat).\\
+	 -Ilyenkor nem kell a rekurzív hívásnál a teljes aktuális utat átadni : elég az út hosszát, az aktuális csúcsot és annak szülőjét.
+	 
+	 \subsection{Értékelés}
+	 \underline{Előnyök}: \\
+	 -Mindig terminál, talál megoldást (a mélységi korláton belül)\\
+	 -Könnyen implementálható \\
+	 -Kicsi memória igény \\ \\
+	 \underline{Hátrányok}: \\
+	 -Nem ad optimális megoldást. (iterációba szervezhető)\\
+	 -Kezdetben hozott rossz döntést csak sok visszalépés korrigál (visszaugrásos keresés) \\
+	 -Egy zsákutca részt többször is bejárhat a keresés \\
+	 
+	 
+	 
 	 
 	 
 	 
