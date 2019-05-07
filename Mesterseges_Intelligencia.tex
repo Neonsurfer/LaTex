@@ -385,6 +385,35 @@
 	 -Kezdetben hozott rossz döntést csak sok visszalépés korrigál (visszaugrásos keresés) \\
 	 -Egy zsákutca részt többször is bejárhat a keresés \\
 	 
+	 \section{Gráfkeresés}
+	 A gráfkeresés olyan KR, amelynek:\\
+	 \hspace*{1em} -globális munkaetülete: a reprezentációs gráf startcsúcsból kiinduló már\\
+	 \hspace*{1em} feltárt útjait tárolja ( tehát egy részgráfot), és külön az egyes utak végeit, \\
+	 \hspace*{1em} a nyílt csúcsokat\\
+	 \hspace*{2em} -kiinduló értéke: a startcsúcs,\\
+	 \hspace*{2em} -terminálási feltétel: megjelenik egy célcsúcs vagy megakad az algoritmus.\\
+	 \hspace*{1em} -keresés szabálya: egyik útvégi csúcs kiterjesztése\\
+	 \hspace*{1em} -vezérlés stratégiája: a legkedvezőbb csúcs kiterjesztésére törekszik
+	 
+	 \subsection{Általános gráfkereső algoritmus}
+	 Jelölések:\\
+	 \hspace*{1em} -keresőgráf (G): a reprezentációs gráf eddig bejárt és eltárolt része\\
+	 \hspace*{1em}-nyílt csúcsok halmaza (NYÍLT): kiterjesztésre várakozó csúcsok, amelyeknek\\
+	 \hspace*{1em} gyerekeit még nem vagy nem eléggé jól ismerjük. \\
+	 \hspace*{1em} -kiterjesztett csúcsok halmaza (ZÁRT) : azok a csúcsok, amelyeknek a \\
+	 \hspace*{1em} gyerekeit már előállítottuk.\\
+	 \hspace*{1em} -kiértékelő függvény (f: NYÍLT $\rightarrow$  ${\rm I\!R}$): kiválasztja a megfelelő nyílt csúcsot \\
+	 \hspace*{1em}kiterjesztésre
+	 
+	 \subsection{Kritika}
+	 -Nem olvasható ki a megoldási út a kereső gráfból\\
+	 \hspace*{1em} -Meg kell jegyezni a felfedezett utak nyomát.\\
+	 Nem garantál optimális megoldást (sőt még a megoldást sem)\\
+	 \hspace*{1em} -Tároljuk el egy csúcsnál az odavezető eddig talált legjobb út költségét.\\
+	 Körökre érzékeny\\
+	 \hspace*{1em} -Ha ehhez a csúcshoz egy kört tartalmazó utat találunk, akkor annak költsége\\
+	 \hspace*{1em}  drágább lesz a tárolt értéknél, hiszen $\delta$-gráfban vagyunk.
+	 
 	 
 	 
 	 
