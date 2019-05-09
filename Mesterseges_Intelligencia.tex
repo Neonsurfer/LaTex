@@ -414,8 +414,143 @@
 	 \hspace*{1em} -Ha ehhez a csúcshoz egy kört tartalmazó utat találunk, akkor annak költsége\\
 	 \hspace*{1em}  drágább lesz a tárolt értéknél, hiszen $\delta$-gráfban vagyunk.
 	 
+	 \subsection{Gráfkeresés függvényei}
+	 $\pi$(n)= N$\rightarrow$ N szülőre visszamutató pointer \\
+	 \hspace*{1em} $\pi$ (n)=n csúcs már ismert szülője, $\pi$(start)=nil\\
+	 \hspace*{2em} $\pi$ egy start gyökerű irányított feszítőfát jelöl ki G-ben: $\pi$ feszítőfa, $\pi$-út \\
+	 \hspace*{2em} Jó lenne, ha a $\pi$-út optimális start$\rightarrow$n G-beli utat jelölne ki: a $\pi$ feszítőfa\\
+	 \hspace*{2em} optimális lenne. \\
+	 g: N$\rightarrow$${\rm I\!R}$ költség függvény\\
+	 \hspace*{1em} g(n)=c$\textsuperscript{$\alpha$}$(start,n) - egy már megtalált $\alpha$$\in$ {start $\rightarrow$n} út költsége\\
+	 \hspace*{1em} Jó lenne ha minden n-re a g(n) a $\pi$-út költségét mutatná, azaz a $\pi$ és\\
+	 \hspace*{1em} g konzisztens lenne.
 	 
+	 \subsection{A korrektség fenntartása}
+	 Kezdetben: $\pi$(start) :=nil, g(start) :=0\\
+	 Az n csúcs kiterjesztése után minden m$\in$$\gamma$(n) csúcsra\\
+	 \hspace*{1em} 1. Ha m új csúcs\\
+	 \hspace*{2em} azaz m$\notin$G akkor\\
+	 \hspace*{3em} $\pi$(m) :=n, g(m) := g(n)+c(n,m)\\
+	 \hspace*{3em} NYÍLT := NYÍLT $\cup$ {m}\\
+	 \hspace*{1em} 2. Ha m régi csúcs, amelyhez olcsóbb utat találtunk\\
+	 \hspace*{2em} azaz m $\in$ G és g(n) + c(n,m) $<$ g(m) akkor\\
+	 \hspace*{3em} $\pi$(m) :=n, g(m) :=g(n)+c(n,m) //g(n) értéke ekkor csökken\\
+	 \hspace*{1em} 3. Ha m régi csúcs, amelyhez nem találtunk olcsóbb utat\\
+	 \hspace*{2em} azaz m$\in$G és g(n) + c(n,m)  $\geq$g(m) akkor SKIP\\
 	 
+	 \subsection{Általános gráfkereső algoritmus}
+	 1: G:= ({start}, $\emptyset$);NYÍLT:={start};g(start):=0;$\pi$(start):=nil\\
+	 2: loop\\
+	 3: \hspace{1em} if empty(NYÍLT) then return nincs megoldás\\
+	 4: \hspace{1em} n:=$min_f$(NYÍLT) \\
+	 5: \hspace{1em} if cél(n) then return megoldás\\
+	 6: \hspace{1em} NYÍLT :=NYÍLT-{n}\\
+	 7: \hspace{1em} for $\forall$m$\in$$\delta$(n)-$\pi$(n) loop\\
+	 8: \hspace{2em} if(m) $\notin$ G or g(n) + c(n,m) $<$g(m) then\\
+	 9: \hspace{3em} $\pi$(m):=n; g(m):=g(n)+c(n,m); NYÍLT :=NYÍLT$\cup${m}\\
+	 10:\hspace{1em} endloop\\
+	 11:\hspace{1em} G:=G $\cup$ {(n,m)$\in$A $|$ m $\in$$\gamma$(n)-$\pi$(n)}\\
+	 12: endloop
+	 
+	 \subsection{Működés és eredmény}
+	 A GK $\delta$-gráfban a működése során egy csúcsot legfeljebb véges sokszor terjeszt ki. (Ebből következik például, hogy körökre nem érzékeny)\\
+	 A GK véges $\delta$-gráfban mindig terminál.\\
+	 Ha a véges $\delta$-gráfban létezik megoldás, akkor a GK megoldás megtalálásával terminál.\\ \\
+	 Egy GK kiértékelő függvénye csökkenő, amennyiben a egy csúcs kiértékelő függvény értéke az algoritmus működése során nem növekszik, viszont mindig csökken, valahányszor a korábbinál olcsóbb utat találunk hozzá. \\
+	 Csökkenő kiértékelő függvény mellett a GK időről időre automatikusan helyreállítja a kereső gráf korrektségét, azaz a $\pi$ feszítő fájának optimálisságát és konzisztenciáját.\\
+	 
+	 \subsection{Nevezetes gráfkereső algoritmusok}
+	 Most az f kiértékelő függvény megválasztása következik.\\
+	 Nem-informált \hspace{10em} Heurisztikus\\
+	 mélységi (MGK) \hspace{10em} előre tekintő (mohó, best-first)\\
+	 szélességi (SZGK) \hspace{10em} A, A*, $A^c*$\\
+	 egyenletes (EGK) \hspace{10em} A**,B\\
+	 
+	 \subsection{Heurisztika a gráfkereséseknél}
+	 Heurisztikus függvénynek nevezzük azt a h:N$\rightarrow$${\rm I\!R}$ függvényt, amelyik egy csúcsnál megbecsüli a csúcsból a célba vezető ("hátralévő") optimális út költségét.\\
+	 h(n) $\approx$ min $\textsubscript{t$\in$T}$c*(n,t) = c*(n,T)=n*(n) (h*:N$\rightarrow$${\rm I\!R}$)\\
+	 Ez egy az eddiginél szigorúbb definíciója a heurisztikának.\\
+	 
+	 \subsection{Heurisztikus függvények tulajdonságai}
+	 Nevezetes tulajdonságok:\\
+	 Nem-negatív: h(n) $\geq$ 0 $\forall$n$\in$N\\
+	 Megengedhető (admissible): h(n) $\leq$h*(n) $\forall$n$\in$N\\
+	 Monoton megszorítás: h(n)-h(m) $\leq$c(n,m) $\forall$(n,m)$\in$A (következetes)\\
+	 
+	 \subsection{A memória igény vizsgálata}
+	 $ZART_s$ ~az S gráfkereső algoritmus által lezárt (kiterjesztett csúcsok halmaza)\\
+	 Rögzítsünk egy feladatot és két, X ésé Y gráfkereső algoritmust\\
+	 Az adott feladatra nézve\\
+	 a. az X nem rosszabb az Y-nál, ha $ZART_X$ $\subseteq$$ZART_Y$\\
+	 b. az X jobb az Y-nál, ha $ZART_X$ $\subseteq$$ZART_Y$ \\
+	 Ezek alapján összevethető\\
+	 1. két eltérő heurisztikájú A* algoritmus ugyanazon a feladaton, azaz a két heurisztika.\\
+	 2. két útkereső algoritmus, például az A* algoritmus és egy másik szintén optimális megoldást garantáló- gráfkereső algoritmus a megengedhető problémák egy részhalmazán.\\
+	 
+	 \subsection{Különböző heurisztikájú A* algoritmusok memória igényének összehasonlítása}
+	 Az $A_1$ ($h_1$ heurisztikával) és $A_2$ ($h_2$ heurisztikával) A* algoritmusok közül az $A_2$ jobban informált, mint az $A_1$, ha minden n$\in$N$/$ T csúcsra teljesül, hogy $h_1$(n)$<$$h_2$(n).\\
+	 Bebizonyítható, hogy a jobban informált $A_2$ nem rosszabb a kevésbé informált $A_1$-nél, azaz ZÁRT$\textsubscript{A2}$ $\subseteq$ ZÁRT$\textsubscript{A1}$
+	 
+	 \subsection{A futási idő elemzése}
+	 Zárt csúcsok száma: k=$|$ZÁRT$|$\\
+	 Alsókorlát: k\\
+	 \hspace*{1em} Egy monoton megszorításos heurisztika mellett egy csúcs legfeljebb csak\\
+	 \hspace*{1em} egyszer terjesztődik ki,\\
+	 \hspace*{1em} habár ettől még a kiterjesztett csúcsok száma igen sok is lehet\\
+	 \hspace*{1em} (lásd egyenletes keresés)\\
+	 Felsőkorlát: 2$\textsuperscript{k-1}$\\
+	 \hspace*{1em} lásd. Martelli példáját
+	 
+	 \subsection{B algoritmus}
+	 Martelli javasolta belső kiértékelő függvénynek a g költség függvényt.\\
+	 A B algoritmust az A algoritmusból kapjuk úgy, hogy bevezetjük az F aktuális küszöbértéket, majd\\
+	 \hspace*{1em} az 1. lépést kiegészítjük az F:= f(s) értékadással,\\
+	 \hspace*{1em} a 4. lépést pedig helyettesítjük az \\
+	 \hspace*{1em} if min(NYÍLT)$<$F\\
+	 \hspace*{2em} then n:= $min_g$(m$\in$NYÍLT $|$ f=(m)$<$F)\\
+	 \hspace*{2em} else n:= $min_f$(NYÍLT); F:=f(n)\\
+	 \hspace*{1em} endif elágazással.
+	 
+	 \newpage
+	 \subsection{B algoritmus futási ideje}
+	 A B algoritmus ugyanúgy működik, mint az A*, azzal a kivétellel, hogy egy árokhoz tartozó csúcsot csak egyszer terjeszt ki.\\
+	 Futási idő elemzése:\\
+	 \hspace*{1em} Legrosszabb esetben:\\
+	 \hspace*{2em} minden zárt csúcs először küszöbcsúcsként terjesztődik ki. \\
+	 \hspace*{2em} (Csökkenő kiértékelő függvény mellett egy csúcs csak egyszer, \\
+	 \hspace*{2em} a legelső kiterjesztésekor\\
+	 \hspace*{2em} lehet köszöb.)\\
+	 \hspace*{2em} Az i-dik árok legfeljebb az összes addigi i-1 darab küszöbcsúcsot \\
+	 \hspace*{2em} tartalmazhatja ( a start csúcs nélkül).\\
+	 \hspace*{1em} Így az összes kiterjesztések száma legfeljebb 1/2x$k^2$
+	 
+	 \subsection{Heurisztika szerepe}
+	 Milyen a jó heurisztika?\\
+	 -megengedhető: h(n) $\leq$h*(n)\\
+	 \hspace*{1em} Bár nincs mindig szükség optimális megoldásra.\\
+	 -jól informált: h(n) ~ h*(n)\\
+	 -monoton megszorítás: h(n)-h(m)$\leq$c(n,m)\\
+	 \hspace*{1em} Ilyenkor nem érdemes B algoritmust használni\\
+	 Változó heurisztikák:\\
+	 -f=g+$\phi$xh ahol $\phi$~d\\
+	 -B' algoritmus\\ \\
+	 if h(n)$<$min\textsubscript{m$\in$$\gamma$(n)}(c(n,m)+h(m))\\
+	 then h(n):=min\textsubscript{m$\in$$\gamma$(n)}(c(n,m)+h(m))\\
+	 else for $\forall$m$\in$$\gamma$(n)-re loop\\
+	 \hspace*{1em} if h(n)-h(m)$>$c(n,m) then h(m):= h(n)-c(n,m)\\
+	 \hspace*{1em} endloop\\ \\
+	 A h megengedhető marad\\
+	 A h nem csökken\\
+	 A monoton megszorításos élek száma nő\\
+	 
+	 \newpage
+	 \subsection{Mohó A algoritmus}
+	 Nincs mindig szükség az optimális megoldásra. Ilnyekor a mohó A* algoritmus is használható, amely rögtön megáll, ha célcsúcs jelenik meg a NYÍLT-ban.\\
+	 Mohó A* algoritmus csak a megoldás megtalálását garantálja. De belátható:\\
+	 Ha h megengedhető és $\forall$t$\in$T: $\forall$(n,t)$\in$A:h(n)+$\alpha$ $\geq$c(n,t), akkor a talált megoldás költsége: g(t) $\leq$h*(s)+$\alpha$\\
+	 A mohó A* algoritmus megengedhető heurisztika mellett akkor garantálja az optimális megoldást is,\\
+	 ha $\forall$ t$\in$T: $\forall$(n,t)$\in$A: h(n)=c(n,t) vagy\\
+	 ha h monoton és $\exists$$\alpha$$\geq$0:$\forall$t$\in$T:$\forall$(n,t)$\in$A:h(n)+$\alpha$=c(n,t)
 	 
 	 
 	 
