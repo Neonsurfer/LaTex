@@ -552,6 +552,68 @@
 	 ha $\forall$ t$\in$T: $\forall$(n,t)$\in$A: h(n)=c(n,t) vagy\\
 	 ha h monoton és $\exists$$\alpha$$\geq$0:$\forall$t$\in$T:$\forall$(n,t)$\in$A:h(n)+$\alpha$=c(n,t)
 	 
+	 \section{Kétszemélyes játékok}
+	 \subsection{Kétszemélyees, teljes információjú, véges determinisztikus, zéró összegű játékok}
+	 Két játékos lép felváltva adott szabályok szerint, amíga játszma vége nem ér.\\
+	 Mindkét játékos ismeri a maga és az ellenfele összes múltbeli és jövőbeli lépéseit és lépési lehetőségeit, és azok következményeit.\\
+	 Minden lépés véges számú lehetőség közül választható, és minden játszma véges lépésben véget ér. Egy lépés determinisztikus, a véletlennek nincs szerepe.\\
+	 Amennyit a játszma végén az egyik játékos nyer, annyit veszít a másik. (Legegyszerűbb változatban két esélyes: egyik nyer, másik veszít; vagy három esélyes: döntetlen is megengedett)\\
+	 
+	 \subsection{Állapottér-reprezentáció}
+	 állapot \hspace{3em} -állás + soron következő játékos\\
+	 művelet \hspace{2,6em} -lépés\\
+	 kezdő állapot \hspace{0,6em}-kezdőállás + kezdő játékos\\
+	 végállapot \hspace{2em}-végállás + játékos\\
+	 payoff függvény: $p_A$,$p_B$: végállapot $\rightarrow$  ${\rm I\!R}$ (játékosok: A,B)\\
+	 \hspace*{1em} Zéró összegű kétszemélyes játékban:\\
+	 \hspace*{2em} $p_A$(t) + $p_B$(t)=0 minden t végállapotra\\
+	 \hspace*{1em} Speciális esetben:\\
+	 \hspace*{2em} $p_A$(t)=+1 ha A nyer\\
+	 \hspace*{2em} $p_A$(t)=-1 ha A nyer\\
+	 \hspace*{2em} $p_A$(t)=0 ha A nyer\\
+	 
+	 \newpage
+	 \subsection{Játékfa}
+	 csúcs: állás(egy állás több csúcs is lehet)\\
+	 szint: játékos(felváltva az A és B szintjei)\\
+	 él: lépés (szintről szintre)\\
+	 gyökér: kezdőállás(kezdő játékos)\\
+	 levél: végállások\\
+	 ág: játszma\\
+	 
+	 \subsection{Nyerő stratégia}
+	 Egy játékos nyerő stratégiája egy olyan elv, amelyet betartva az ellenfél minden lépésére tud olyan választ betartva az ellenfél minden lépésére tud olyan választ adni, hogy megnyerje a játékot.\\
+	 A nyerő stratégia NEM egyetlen győztes játszma, hanem olyan győztes játszmák összessége, amelyek közül az egyiket biztos végig tudja játszani az a játékos, aki rendelkezik a nyerő stratégiával.\\
+	 Hasznos lehet a nem-vesztő stratégia megtalálása is, ha döntetlent is megengedő játéknál nincs győztes stratégia.\\
+	 Általános zéró összegű játékoknál beszélhetünk adott hasznosságot biztosító stratégiáról.
+	 TÉTEL:
+	 A két esélyes (győzelem vagy vereség) teljes információjú véges determinisztikus kétszemélyes játékokban az egyik játékos számára biztosan létezik nyerő stratégia.\\
+	 A három esélyes játékokban (van döntetlen is) a nem vesztő stratégiát lehet biztosan garantálni.\\
+	 
+	 \subsection{Részleges játékfa-kiértékelés}
+	 A nyerő vagy nem-vesztő stratégia megkeresése egy nagyobb játékfa esetében reménytelen.\\
+	 Az optimális lépés helyett a soron következő jó lépést keressük. Legyen a bennünket képviselő játékos neve mostantól MAX az ellenfélé pedig MIN.\\
+	 Ehhez az aktuális állapotból indulva kell a játékfa néhány szintjét felépíteni, ezen a részfa leveleinek számunkra való hasznosságát megbecsülni, majd ez alapján a soron következő lépést meghatározni.\\
+	 
+	 \subsection{Kiértékelő függvény}
+	 Minden esetben szükségünk van egy olyan heurisztikára, amely a mi szempontunkból becsüli meg egy állás hasznosságát: f: Állások $\Rightarrow$ [-1000, 1000] függvény.\\
+	 Példák: \\
+	 Sakk: (kiértékelő függvény a fehérnek)\\
+	 f(s) = (fehér királynő száma) - (fekete királynő száma)\\
+	 Tic-tac-toe: f(s) = M(s) -O(s)\\
+	 M(s) = a saját lehetőséges győztes vonalaink száma\\
+	 O(s) = az ellenfél lehetséges győztes vonalaink száma\\
+	 
+	 \subsection{Minimax algoritmus}
+	 A játékfának az adott állás csúcsából leágazó részfáját felépítjük néhány szintig\\
+	 A részfa leveleit kiértékeljük a kiértékelő függvény segítségével.\\
+	 Az értékeket felfuttatjuk a fában:\\
+	 \hspace*{1em} A saját (MAX) szintek csúcsaihoz azok gyermekeinek maximumát:\\
+	 \hspace*{1em} szülő:= max($gyerek_1$,...,$gyerek_k$)\\
+	 \hspace*{1em} Az ellenfél (MIN) csúcsaihoz azok gyermekeinek minimumát:\\ 
+	 \hspace*{1em} szülő:=min($gyerek_1$,...,$gyerek_k$)\\
+	 Soron következő lépésünk ahhoz az álláshoz vezet, ahonnan a gyökérhez felkerült a legnagyobb érték.
+	 
 	 
 	 
 	
