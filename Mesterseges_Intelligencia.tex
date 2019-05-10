@@ -614,6 +614,52 @@
 	 \hspace*{1em} szülő:=min($gyerek_1$,...,$gyerek_k$)\\
 	 Soron következő lépésünk ahhoz az álláshoz vezet, ahonnan a gyökérhez felkerült a legnagyobb érték.
 	 
+	 \subsection{Átlagoló kiértékelés}
+	 Célja a kiértékelő függvény esetleges tévedéseinek simítása.\\
+	 MAX szintjeire az m darab legnagyobb értékű gyerek ($max_m$) átlaga, a MIN-re az n darab legkisebb értékű gyerek ($min_n$) átlaga kerül.
+	 
+	 \subsection{Váltakozó mélységű kiértékelés}
+	 Célja, hogy a kiértékelő függvény minden ágon reális értéket mutasson. Megtévesztő lehet egy csúcsnál ez az érték ha annak szülőjénél a kiértékelő függvény lényegesen eltérő értéket mutat: a játék ezen szakasza nincs nyugalomban.\\
+	 Egy adott szintig (minimális mélység) mindenképpen felépítjük a részfát,\\
+	 majd ettől a szinttől kezdve egy adott szintig (maximális mélység) csak azon csúcsokat terjesztjük ki, amelyekre nem teljesül a nyugalmi teszt: \\
+	 $|$f(szülő) - f(csúcs) $|$ $<$K,
+	 
+	 \subsection{Szelektív kiértékelés}
+	 Célja a memória-igény csökkentése.\\
+	 Elkülönítjük a lényeges és lényegtelen lépéseket, és csak a lényeges lépéseknek megfelelő részfát építjük fel.\\
+	 Ez a szétválasztás heurisztikus ismeretekre épül.\\
+	 
+	 \newpage
+	 \subsection{Negamax algoritmus}
+	 Negamax ejárást könnyebb implementálni.\\
+	 Kezdetben (-1)-gyel szorozzuk azon levélcsúcsok értékeit, amelyek az ellenfél (MIN) szintjein vannak, majd\\
+	 Az értékek felfuttatásánál minden szinten az alábbi módon számoljuk a belső csúcsok értékeit:\\
+	 szülő := max(-$gyerek_1$,...,-$gyerek_k$)
+	 
+	 \subsection{Alfa-béta algoritmus}
+	 Visszalépéses algoritmus segítségével járjuk be a részfát (olyan mélységi bejárás, amely mindig csak egy utat tárol). Az aktuális úton fekvő csúcsok ideiglenes értékei:\\
+	 - a MAX szintjein $\alpha$ érték: ennél rosszabb értékű állásba innen már nem juthatunk\\
+	 - a MIN szintejin $\beta$ érték: ennél jobb értékű állásba onnan már nem juthatunk\\
+	 Lefelé haladva a fában $\alpha$:=-$\infty$, és $\beta$:=+$\infty$\\
+	 Visszalépéskor az éppen elhagyott (gyermek) csúcs értéke (felhozott érték) módosíthatja a szülő csúcs értékét:\\
+	 - a MAX szintjein: $\alpha$ := max(felhozott érték, $\alpha$)\\
+	 - a MIN szintjein: $\beta$ := min(felhozott érték, $\beta$)\\
+	 Vágás: ha az úton van olyan $\alpha$ és $\beta$, hogy $\alpha$ $\geq$ $\beta$.
+	 
+	 \subsection{Elemzés}
+	 Ugyanazt a kezdőlépést kapjuk eredményül, amit a minimax algoritmus talál. (Több egyforma kezdőirány esetén a "baloldalit" választjuk.)\\
+	 Memória igény: csak egy utat tárol.\\
+	 Futási idő: a vágások miatt sokkal jobb, mint a minimax módszeré.\\
+	 Átlagos eset: egy csúcs alatt, két belőle kiinduló ág megvizsgálása után már vághatunk.\\
+	 Optimális eset: egy d mélységű b elágazású fában kiértékelt levélcsúcsok száma: $\sqrt{b\textsuperscript{d}}$\\
+	 Jó eset: A részfa megfelelő rendezésével érhető el.
+	 
+	 \subsection{Kétszemélyes játékot játszó program}
+	 Váltakozó mélységű, szelektív, (m,n) átlagoló, negamax alfa-béta kiértékelést végez.\\
+	 Keretprogram, amely váltakozva fogadja a felhasználó lépéseit, és generálja a számítógép lépéseit.\\
+	 Kiegészítő funkciók (beállítások, útmutató, segítség, korábbi lépések tárolása, mentés stb.)\\
+	 Felhasználói felület, grafika\\
+	 Heurisztika megválasztása (kiértékelő függvény, szelekció, kiértékelés sorrendje)\\
 	 
 	 
 	
