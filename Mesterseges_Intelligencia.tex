@@ -661,6 +661,104 @@
 	 Felhasználói felület, grafika\\
 	 Heurisztika megválasztása (kiértékelő függvény, szelekció, kiértékelés sorrendje)\\
 	 
+	 \section{Evolúciós algoritmusok}
+	 
+	 \subsection{Evolúció, mint kereső rendszer}
+	 A problémára adható néhány lehetséges választ, azaz a problématér több egyedét tároljuk egyszerre. Ez a populáció.\\
+	 Kezdetben egy többnyire véletlen populációt választunk. A cél egy bizonyos célegyed vagy egy jó populáció előállítása.\\
+	 Az egyedeket egy rátermettségi függvény alapján hasonlítjuk össze.\\
+	 A populációt lépésről lépésre javítjuk úgy, hogy a kevésbé rátermett egyedek egy részét rátermettebbekhez hasonló egyedekre cseréljük le. Ez a változtatás visszavonhatatlan. Ez egy nem-módosítható stratégiájú keresés.\\
+	 
+	 \subsection{Evolúciós operátorok és a terminálási feltétel}
+	 Szelekció: Kiválasztunk néhány (lehetőleg rátermett) egyedet szülőnek.\\
+	 Rekombináció (keresztezés): Szülőkből utódok készülnek úgy, hogy a szülők tulajdonságait örököljék az utódok.\\
+	 Mutáció: Az utódok tulajdonságait kismértékben módosítjuk.\\
+	 Visszahelyezés: Új populációt alakítunk ki az utódokból és a régi populációból.\\
+	 Terminálási feltétel: \\
+	 -ha a célegyed megjelenik a populációban.\\
+	 -ha a populáció egyesített rátermettségi függvény értéke egy ideje nem változik.\\
+	 
+	 \subsection{Evolúció alapalgoritmusa}
+	 populáció:= kezdeti populáció\\
+	 while terminálási feltétel nem igaz loop\\
+	 \hspace*{1em} szülők:= szelekció(populáció)\\
+	 \hspace*{1em} utódok:= rekombináció (szülők)\\
+	 \hspace*{1em} populáció:= visszahelyezés(populáció, utódok)\\
+	 endloop\\
+	 
+	 \subsection{Kielégíthetőségi probléma (SAT)}
+	 Adott egy n változós Boolean formula KNF alakban. A változók milyen igazság kiértékelése mellett lesz a formula igaz?\\
+	 Példa: ($x_1$ $\vee$ !$x_2$ $\vee$ $x_5$) $\wedge$ ($x_1$ $\vee$ !$x_3$) $\wedge$ (!$x_1$ $\vee$ $x_4$) $\wedge$ (!$x_2$ $\vee$ $x_5$)\\
+	 Egy megoldás: $x_1$=true; $x_2$=false; $x_3$=false; $x_4$=true; $x_5$=true\\
+	 Egyed: egy lehetséges igazság kiértékelés\\
+	 Reprezentáció: logikai érték (bitek) sorozata\\
+	 Rátermettségi függvény: Az adott formula igazra értékelt klózainak száma\\
+	 
+	 \subsection{Evolúciós algoritmus elemei}
+	 Problématér egyedeinek reprezentációja: kódolás\\
+	 Rátermettségi függvény (fitnesz függvény) -kapcsolat a kódolással és a céllal\\
+	 Evolúciós operátorok - szelekció, rekombináció, mutáció, visszahelyezés\\
+	 Kezdő populáció, megállási feltétel (cél)\\
+	 Stratégiai paraméterek - populáció mérete, mutáció valószínűsége, utódképzési ráta, visszahelyezési ráta, stb.\\
+	 
+	 \subsection{Kódolás}
+	 Egy egyedet egy jelsorozattal (kromoszómával) kódolunk. A jelsorozatnak néha ki kell elégítenie egy kód-invariánst.\\
+	 Az egyedeket az őket reprezentáló kódjukon keresztül változtatjuk meg. Egy jel vagy jelcsoport, azaz a gén írja le az egyed egy tulajdonságát (attribútum-érték párját).\\
+	 Sokszor egy génnek a kódsorozatban elfoglalt pozíciója (lókusza) jelöli ki a gén által leírt attribútumot, amelynek értéke maga a gén (allél). A kód ekkor tulajdonságonként feldarabolható: egy rövid kódszakasz megváltoztatása kis mértékben változtat az egyeden.\\
+	 Gyakori megoldások: \\
+	 -Vektor: valós vagy egész számok rögzített hosszú tömbje\\
+	 -Bináris kód: bitek rögzített hosszú tömbje \\
+	 -Véges sok elem permutációja\\
+	 
+	 \subsection{Szelekció}
+	 Célja: a rátermett egyedek kiválaszása úgy, hogy a rosszabbak kiválasztása is kapjon esélyt.\\
+	 -Rátermettség arányos (rulett kerék algoritmus): minél jobb a rátermettségi függvényértéke egy elemnek, annál nagyobb valószínűséggel választja ki.\\
+	 -Rangsorolásos: rátermettség alapján sorba rendezett egyedek közül a kisebb sorszámúakat nagyobb valószínűséggel választja ki.\\
+	 -Versengő: véletlenül kiválasztott egyedcsoportok (pl. párok) legjobb egyedét választja ki.\\
+	 -Csonkolásos/selejtezős: a rátermettség szerint legjobb (adott küszöbérték feletti) valahány egyedből véletlenszerűen választ néhányat.
+	 
+	 \subsection{Rekombináció}
+	 A feladata az, hogy adott szülő-egyedekből olyan utódokat hozzon létre, amelyek a szüleik tulajdonságait "öröklik".\\
+	 -Keresztezés: véletlen kiválasztott pozíción jelcsoportok (gének) vagy jelek cseréje.\\
+	 -Rekombináció: a szülő egyedek megfelelő jeleinek kombinálásával kapjuk az utód megfelelő jelét.\\
+	 Ügyelni kell a kód-invariáns megtartására: vizsgálni kell, hogy az új kód értelmes lesz-e (permutáció)
+	 
+	 \subsection{Permutációk keresztezése}
+	 Parciálisan illesztet keresztezés:\\
+	 Egy szakasz cseréje után párba állítja és kicseréli azokat a szakaszon kívüli elemeket, amelyek megsértik a permutáció tulajdonságot.\\ \\
+	 Ciklikus keresztezés:\\
+	 1. Választ egy véletlen i$\in$[1..length]-t\\
+	 2. $a_i$ $\leftrightarrow$ $b_i$ \\
+	 3. Keres olyan j$\in$[1..length]-t (j$\neq$i), amelyre $a_j$=$a_i$,\\
+	 4. Ha nem talál, akkor vége, különben i=j\\
+	 5. goto 2.\\
+	 
+	 \subsection{Rekombináció vektorra}
+	 Köztes rekombináció: \\
+	 -A szülők (x,y) által kifeszített hipertégla környezetében lesz utód (u).\\
+	 -$\forall$i=1..n:$u_i$ =$a_i$$x_i$ + (1-$a_i$)$y_i$  $a_i$$\in$[-h, 1+h] véletlen\\ \\
+	 Lineáris rekombináció: \\
+	 -A szülők (x,y) által kifeszített egyenesen a szülők környezetében vagy a szülők között lesz az utód (u).\\
+	 -$\forall$i=1..n: $u_i$=a$x_i$ + (1-a)$y_i$ a$\in$[-h, 1+h] véletlen\\
+	 
+	 \subsection{Mutáció}
+	 A mutáció egy egyed (utód) kis mértékű véletlen változtatását végzi.\\
+	 Valós tömbbel való kódolásnál kis p valószínűséggel:\\
+	 -$\forall$i=1..n:$z_i$=$x_i$$\pm$ $range_i$* (1-2*p)\\
+	 Bináris tömbbel való kódolásnál kis p valószínűséggel:
+	 -$\forall$i=1..n:$z_i$=1-$x_i$ if random[0..1]<p\\
+	 Permutáció esetén\\
+	 -egy jelpár cseréje\\
+	 -egy kódszakaszon a jelek ciklikus léptetése vagy megfordítása vagy átrendezése.\\
+	 
+	 \newpage
+	 \subsection{Visszahelyezés}
+	 A visszahelyezés a populációnak az utódokkal történő frissítése: Kiválasztja a populációnak a lecserélendő egyedeit, és azok helyére a kiválasztott [két szelekció is kell] utódokat teszi.\\
+	 utódképzési ráta (u)= $\frac{utodok szama}{populacio szama}$\\
+	 visszahelyezési ráta (v) = $\frac{lecserelendo egyedek szama}{populacio szama}$\\
+	 -ha u=v, akkor feltétlen cseréről van szó\\
+	 -ha u$<$v, akkor egy utód több[további szelekció] példánya is bekerülhet\\
+	 -ha u$>$v, akkor az utódok közül[további szelekció] szelektál
 	 
 	
 		
