@@ -760,7 +760,33 @@
 	 -ha u$<$v, akkor egy utód több[további szelekció] példánya is bekerülhet\\
 	 -ha u$>$v, akkor az utódok közül[további szelekció] szelektál
 	 
+	\section{Automatikus következtetés}
+	\subsection{Rezolúció}
+	Feladat:\\
+	$A_1$: Ha süt a nap, akkor Péter strandra megy.\\
+	$A_2$: Ha Péter strandra megy, akkor úszik.\\
+	$A_3$: Péternek nincs lehetősége otthon úszni.\\
+	Lássuk be, hogy ezekből következik:\\
+	B: Ha süt a nap, akkor Péter nem marad otthon.\\
+	Formalizálás:\\
+	Süt a nap: \hspace{5em} p \hspace{1em}$A_1$: p$\rightarrow$ q\\
+	Péter strandra megy: \hspace{0,3em} q\hspace{1em} $A_2$: q$\rightarrow$ r\\
+	Péter úszik: \hspace{4,5em} r \hspace{1em}$A_3$ !(s$\wedge$r)\\
+	Péter otthon marad: \hspace{0,7em} s\hspace{1em} B: p$\rightarrow$!s\\
 	
+	\subsection{Átalakítás}
+	Kell: p$\rightarrow$q, q$\rightarrow$r, !(s$\wedge$r) $\rightarrow$[logikai következmény] p$\rightarrow$!s\\
+	-Minden olyan interpretáció (igazságértékelés), amely kielégíti a feltételeket, az kielégíti a következményt is.\\
+	-Vagy: nincs olyan interpretáció (igazságértékelés), amely a feltételeket is, és következmény negáltját is kielégítené.\\
+	-Azaz: (p$\rightarrow$)$\wedge$(q$\rightarrow$r)$\wedge$!(s$\wedge$r)$\wedge$!(p$\rightarrow$!s) kielégíthetetlen\\
+	 vagy: (!p$\vee$q)$\wedge$(!q$\vee$r)$\wedge$(!s$\vee$!r)$\wedge$p$\wedge$s kielégíthetetlen\\
+	 Tehát meg kell mutatnunk, hogy bármelyik interpretációval (igazságértékeléssel) legalább az egyik klóz hamis lesz.
+	 
+	 \subsection{Rezolúció = Indirekt bizonyítás}
+	 Tekintsük a klózok halmazát és tegyük fel indirekt módon, hogy van olyan interpretáció, amikor mindegyik klóz igaz.\\
+	 Ekkor például p is, és !p$\vee$q is igaz. Ha azonban p igaz, akkor !p hamis, és ekkor a !p$\vee$q csak úgy lehet igaz, ha a q is igaz.\\
+	 A q - amely ugyancsak egy klóz - tehát akárcsak a többi klóz igaz az indirekt feltevés szerinti interpretációban. Vegyük hát hozzá az eddigi klózhalmazhoz.\\
+	 Az előbbihez hasonló módon bővítsük tovább a klózhalmazt addig, amíg ellentmondáshoz nem jutunk. (például egyszerre megjelenik a klózhalmazban a q és a !q).
 		
 \end{document}
 

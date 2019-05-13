@@ -1,15 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.6)  12 MAY 2019 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  13 MAY 2019 08:58
 entering extended mode
 **./Mesterseges_Intelligencia.tex
 (Mesterseges_Intelligencia.tex
 LaTeX2e <2018-12-01>
-
-("C:\Users\Audiosurfer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article
-.cls"
+("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-
-("C:\Users\Audiosurfer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.
-clo"
+("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -89,7 +85,7 @@ ott fe-lada-tot utkeresesi
 
 [1
 
-{C:/Users/Audiosurfer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/mvass/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Overfull \hbox (23.78601pt too wide) in paragraph at lines 43--59
 \OT1/cmr/m/n/10 -ut koltsege $\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 c($\OML/cm
 m/m/it/10 $\OT1/cmr/m/n/10 )=c$[]$(n,m) := $\OML/cmm/m/it/10 $$[]$\OT1/cmr/m/
@@ -146,9 +142,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
 [3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
 
-
-("C:\Users\Audiosurfer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.
-fd"
+ ("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -507,31 +501,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 745--753
 
  []
 
-[24] [25] (Mesterseges_Intelligencia.aux) ) 
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 765--776
+
+ []
+
+[25] (Mesterseges_Intelligencia.aux) ) 
 Here is how much of TeX's memory you used:
  242 strings out of 492945
- 3027 string characters out of 3123589
+ 3131 string characters out of 3126252
  67254 words of memory out of 3000000
  4221 multiletter control sequences out of 15000+200000
  4850 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  23i,8n,18p,605b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Audiosurfer/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Audiosu
-rfer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pf
-b><C:/Users/Audiosurfer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Users/Audiosurfer/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Audiosurfer/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Audiosurfer/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Users/Audiosurfer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr5.pfb><C:/Users/Audiosurfer/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr7.pfb><C:/Users/Audiosurfer/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Audiosurfer/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Au
-diosurfer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb>
-Output written on Mesterseges_Intelligencia.pdf (25 pages, 201378 bytes).
+<C:/Users/mvass/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mvass/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mvass
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mvass/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mvass/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
+mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pf
+b><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb>
+Output written on Mesterseges_Intelligencia.pdf (25 pages, 202767 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
