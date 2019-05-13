@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  13 MAY 2019 08:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  13 MAY 2019 13:13
 entering extended mode
 **./Mesterseges_Intelligencia.tex
 (Mesterseges_Intelligencia.tex
@@ -506,32 +506,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 765--776
 
  []
 
-[25] (Mesterseges_Intelligencia.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--792
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--792
+
+ []
+
+[25]
+Overfull \hbox (8.16722pt too wide) in paragraph at lines 794--799
+\OT1/cmr/m/n/10 egy szul}o csucsban elvegezhet}o, az barmelyik leszarmazot
+t csucsban is elvegezhet}o.
+ []
+
+
+Overfull \hbox (40.94528pt too wide) in paragraph at lines 794--799
+[]\OT1/cmr/m/n/10 Iteletkalkulusban a grafnak csak veges sok kulonboz}o c
+sucsa lehet, predikatumkalkulusban
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 801--809
+
+ []
+
+[26]
+Overfull \hbox (32.90819pt too wide) in paragraph at lines 812--819
+\OT1/cmr/m/n/10 4. Egzisz-tencialis kvan-torok kikuszobolese (nem ek-vi-va
+lens atalaktas, de kielegthet}oseg
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--838
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 840--844
+
+ []
+
+
+Overfull \hbox (15.95688pt too wide) in paragraph at lines 846--849
+\OT1/cmr/m/n/10 Egy $\OML/cmm/m/it/10 A[]$\OT1/cmr/m/n/10 ,...,$\OML/cmm/m/it/1
+0 A[]$$\OMS/cmsy/m/n/10 !$\OT1/cmr/m/n/10 C problema eseten az axiomakat k
+et cso-portba soroljuk: szabalyokra
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 851--859
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 861--867
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--875
+
+ []
+
+[28] [29] (Mesterseges_Intelligencia.aux) ) 
 Here is how much of TeX's memory you used:
- 242 strings out of 492945
- 3131 string characters out of 3126252
+ 243 strings out of 492945
+ 3139 string characters out of 3126252
  67254 words of memory out of 3000000
- 4221 multiletter control sequences out of 15000+200000
+ 4222 multiletter control sequences out of 15000+200000
  4850 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  23i,8n,18p,605b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/mvass/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mvass/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mvass
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mvass/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mvass/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
-mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pf
-b><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb>
-Output written on Mesterseges_Intelligencia.pdf (25 pages, 202767 bytes).
+<C:/Users/mvass/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mvass/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/
+mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mvass/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mvass/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mvass/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+sers/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y5.pfb><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb>
+Output written on Mesterseges_Intelligencia.pdf (29 pages, 212208 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
+ 139 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

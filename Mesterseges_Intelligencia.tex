@@ -784,9 +784,107 @@
 	 
 	 \subsection{Rezolúció = Indirekt bizonyítás}
 	 Tekintsük a klózok halmazát és tegyük fel indirekt módon, hogy van olyan interpretáció, amikor mindegyik klóz igaz.\\
-	 Ekkor például p is, és !p$\vee$q is igaz. Ha azonban p igaz, akkor !p hamis, és ekkor a !p$\vee$q csak úgy lehet igaz, ha a q is igaz.\\
+	 Ekkor például p is, és $\neg$p$\vee$q is igaz. Ha azonban p igaz, akkor !p hamis, és ekkor a $\neg$p$\vee$q csak úgy lehet igaz, ha a q is igaz.\\
 	 A q - amely ugyancsak egy klóz - tehát akárcsak a többi klóz igaz az indirekt feltevés szerinti interpretációban. Vegyük hát hozzá az eddigi klózhalmazhoz.\\
-	 Az előbbihez hasonló módon bővítsük tovább a klózhalmazt addig, amíg ellentmondáshoz nem jutunk. (például egyszerre megjelenik a klózhalmazban a q és a !q).
+	 Az előbbihez hasonló módon bővítsük tovább a klózhalmazt addig, amíg ellentmondáshoz nem jutunk. (például egyszerre megjelenik a klózhalmazban a q és a !q).\\ \\
+	 Cáfolati gráf: az üres klózt előállítását bemutató gráf.\\
+	 Rezolúciós gráf: az összes klóz előállítását mutató gráf.\\
+	 
+	 \subsection{A reprezentációs gráf tulajdonságai}
+	 Egy csúcs egyetlen klózzal tartalmaz csak többet a szülőcsúcsánál: olyannal, amelyik a szülő csúcs két klózából vezethető le.\\
+	 Mindegyik csúcs tartalmazza a kiinduló klózokat. Az a rezolúciós lépés, amely egy szülő csúcsban elvégezhető, az bármelyik leszármazott csúcsban is elvégezhető. Nincsenek körök.\\
+	 Ha van cáfolat, akkor minden csúcsból el lehet jutni egy üres klózt is tartalmazó célcsúcsba.\\
+	 Nincs rossz döntés, legfeljebb csak felesleges.\\
+	 Ítéletkalkulusban a gráfnak csak véges sok különböző csúcsa lehet, predikátumkalkulusban lehet végtelen sok.
+	 
+	 \subsection{Nem-módosítható kereső rendszer}
+	 globális munkaterület: aktuális klózhalmaz\\
+	 kiindulási érték: az axiómák $\rightarrow$ célállítás klózai\\
+	 terminálási feltétel:\\
+	 -sikeres: üres klóz\\
+	 -sikertelen: nincs újabb rezolvens klóz\\
+	 kereső szabály: rezolvens képzés\\
+	 vezérlési stratégia: elég a nem-módosítható\\
+	 heurisztika: jó lenne a hatékonyság miatt, de sajnos nincs\\
+	 
+	 \newpage
+	 \subsection{Formulák klóz-formára (SKNF) hozása}
+	 1. Kiküszöböljük az $\leftrightarrow$ és a $\rightarrow$ műveleti jeleket(logikai törvények).\\
+	 2. Redukáljuk a negációk hatáskörét (DeMorgan azonosságok).\\
+	 3. Standardizáljuk a változókat (kvantoronkénti átnevezés).\\
+	 4. Egzisztenciális kvantorok kiküszöbölése (nem ekvivalens átalakítás, de kielégíthetőség tartó)\\
+	 5. Univerzális kvantorok kiemelése a formula elejére a sorrendjük megtartásával (prenex normál forma)\\
+	 6. A formula többi részét konjunktív normálformára alakítjuk (kommutatív, asszociatív, disztributív törvények).\\
+	 7. Kialakítjuk a klózokat (a kvantorokat, és )
+	 
+	 \subsection{Rezolúció algoritmusa}
+	 1. KLÓZOK:= $A_1$,$A_2$,...,$A_n$ és $\neg$B formulák klózai\\
+	 2. loop\\
+	 3. \hspace{1em} if \fbox{} $\in$ KLÓZOK then return kielégíthetetlen\\
+	 4. if nincs olyan $C_1$,$C_2$$\in$KLÓZOK, amelyre R($C_1$,$C_2$) még nem ismert \\
+	 \hspace*{5em}(nincs a KLÓZOK között)\\
+	 \hspace*{1em} then return nem kielégíthetetlen\\
+	 5. select $C_1$,$C_2$ $\in$ KLÓZOK, ahol R($C_1$,$C_2$) nem ismert\\
+	 6. KLÓZOK := KLÓZOK $\bigcup$ R($C_1$,$C_2$)
+	 
+	 \subsection{Válaszadás rezolúcióval}
+	 "Ha Fifi mindenhová követi Jánost, és János most az iskolában van, akkor hol van most Fifi?"\\
+	 Formalizáció:\\
+	 H(y,x) ~y dolog az x helyen van\\
+	 $\forall$x[H(János,x)$\rightarrow$H(Fifi,x)]\\
+	 H(János, iskola)\\
+	 Először lássuk be, hogy létezik-e Fifi számára hely a világban?\\
+	 $\exists$xH(Fifi,x)\\
+	 
+	 \subsection{Válaszadási eljárás}
+	 1. A kérdést (ki, mit, hol, mikor, mennyiért) egy "van-e válasz a kérdésre" célállítással helyettesítjük.\\
+	 2. Rezolúcióval belátjuk, hogy a célállítás következik az axiómákból.\\
+	 3. A célállítás negáltjából származó klózokat negáltjaik hozzáfűzésével érvényes formulákká egészítjük ki.\\
+	 4. A cáfolati gráf által meghatározott rezolúciót követve létrehozzuk a hasonló szerkezetű válaszadási gráfot, amelynek gyökere tartalmazza az egyik választ.\\
+	 
+	 \subsection{Szabályalapú logikai következtetés}
+	 Egy $A_1$,...,$A_n$$\rightarrow$C probléma esetén az axiómákat két csoportba soroljuk: szabályokra és tényekre.\\
+	 Tények: Konkrét ismeret implikáció nélküli formulákban.\\
+	 Szabályok: Általános ismeret implikációs formulákban A$\rightarrow$B
+	 
+	 \subsection{Az előre- illetve a hátrafelé láncolás}
+	 Előrefelé láncolás: egy alkalmas (illeszthető) szabály segítségével egy állításból új állítást vezet le.\\
+	 Tény: Kutya(Fifi)$\wedge$Postás(Jani)\\
+	 Szabály: $\forall$x$\forall$y Kutya(x)$\wedge$Postás(y)$\rightarrow$Harap(x,y) $\rightarrow$Harap(Fifi,Jani)\\
+	 Illeszthetőség vizsgálat: a tény ekvivalens a szabály előfeltételével az {x $|$ Fifi, y$|$ Jani} helyettesítés mellett (amely itt az egyesítő algoritmussal számolható ki).\\
+	 Hátrafelé láncolás: egy állítás bizonyítását visszavezeti egy alkalmas (illeszthető) szabály előfeltételének igazolására.\\
+	 Cél: Kutya(Fifi)\\
+	 Szabály: $\forall$x Ugat(x) $\rightarrow$ Kutya(x) ~ elég belátni: Ugat(Fifi)\\
+	 Illeszthetőség vizsgálat: a cél ekvivalens a szabály következményével az {x $|$ Fifi} helyettesítés mellett (amely igg az egyesítő algoritmussal számolható ki).\\
+	 
+	 \subsection{Előre haladó szabályalapú reprezentáció}
+	 Tény:\\
+	 -univerzálisan kötött tetszőleges ÉVF kifejezés\\
+	 Szabályok:\\
+	 -L$\rightarrow$W alakú univerzálisan kötött kifejezések, ahol L egy literál, a W pedig ÉVF kifejezés\\
+	 Cél: \\
+	 -$L_1$$\vee$...$\vee$$L_n$ alakú egzisztenciálisan kötött kifejezés, ahol $L_1$,...,$L_n$ literálok.\\
+	 
+	 \subsection{Visszafelé haladó szabályalapú reprezentáció}
+	 Tény:\\
+	 $L_1$$\wedge$...$\wedge$$L_n$ alakú univerzálisan kötött kifejezés, ahol $L_1$,...,$L_n$ literálok.\\
+	 Szabályok:\\
+	 W$\rightarrow$L alakú univerzálisan kötött kifejezések, ahol L egy literál, a W pedig ÉVF kifejezés\\
+	 Cél:\\
+	 Egzisztenciálisan kötött tetszőleges ÉVF kifejezés [ÉS/VAGY formájú (ÉVF) kifejezések]\\
+	 
+	 \subsection{Szabályalapú kereső rendszer}
+	 Célja egy bizonyítás keresése, amit egy ÉS/VAGY gráfbeli ellentmondásmentes megoldásgráf reprezentál.\\
+	 Kereső rendszer:\\
+	 -Globális munkaterület: megkezdett bizonyítás (hiperút)\\
+	 -Kereső rendszer szabályai: láncolások illetve visszalépés\\
+	 -Vezérlési stratégia (elsődleges): visszalépéses stratégia\\
+	 -Másodlagos stratégiák:\\
+	 \hspace*{1em} Formulák alakjának kihasználása\\
+	 \hspace*{1em} A tény (cél) illesztése előzze meg a szabály-illesztést.\\
+	 -Heurisztikák: az adott feladat speciális ismeretei\\
+	 \hspace*{1em} Formulák alakja, metaszabályok, kiértékelő függvény.
+	 
 		
 \end{document}
 
