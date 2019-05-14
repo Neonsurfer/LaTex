@@ -885,7 +885,152 @@
 	 -Heurisztikák: az adott feladat speciális ismeretei\\
 	 \hspace*{1em} Formulák alakja, metaszabályok, kiértékelő függvény.
 	 
+	 \section{Gépi tanulás}
+	 \subsection{Tanulás}
+	 -A megoldandó problémát egy leképzeésként modellezzük: $\delta$:X$\rightarrow$Y\\
+	 -Egy probléma megtanulása ezen leképezés kiszámításának ( vagy közelítő kiszámításának) megtanulását jelenti: keressük azt az f: X$\rightarrow$Y leképezést, amelyre f $\approx$$\delta$\\
+	 -Induktív tanulási modell:\\
+	 f leképezést $x_n$$\in$X(n=1..N) bemenetek (minták) alapján tanuljuk\\
+	 -Adaptív (inkrementális) tanulás\\
+	 Korábban megtanult f leképezést egy új minta esetén anélkül módosíthatjuk, hogy a korábbi mintákat újra megvizsgálnánk.
+	 
+	 \subsection{Tanulási módok}
+	 Felügyelt tanulás: ismeri a tanuláshoz használt minták elvárt kimenetét is, azaz az ($x_n$,$\delta$($x_n$))(n=1..N) input-output párok alapján tanul.\\
+	 Felügyelet nélküli tanulás: nem ismeri a tanuláshoz használt minták elvárt kimenetét; a minták illetve az azokra kiszámolt kimenetek közötti összefüggéseket próbálja felismerni, azokat osztályozni.\\
+	 Megerősítéses tanulás: minták kimenetének kiszámolásánál (minta-problémák megoldásánál) használt lépssorozatok hasznosságát vizsgálja; minősíti az egyes lépéseket, és azt tanulja meg, hogy egy adott szituációban melyik lépést érdemes választani.
+	 
+	 \newpage
+	 \subsection{Felügyelt Tanulás}
+	 Választunk egy f: PxX$\rightarrow$ paraméteres leképezést a vizsgált problémát modellező $\delta$:X$\rightarrow$Y leképezés közelítéséhez, majd azon $\theta$$\in$P paramétert keressük (paraméteres tanulás), amelyre ($x_n$,$y_n$)(n=1..N) tanító minták mellett (ahol $y_n$=$\varphi$($x_n$)) az alábbi kifejezés értéke elég kicsi.\\
+	 (ettől reméljük, hogy f($\theta$,.) $\approx$ $\theta$(.))\\
+	 $\frac{1}{N}$$\sum_{n=1}^{N}$l(f($\theta$,$x_n$),$y_n$)\\
+	 Ahol:\\
+	 l : hiba függvény\\
+	 f($\theta$,$x_n$) : számított kimenet\\
+	 $y_n$ : elvárt kimenet\\
+	 
+	 \subsection{Megjegyzés}
+	 Ez a tanulás akkor működik jól, ha\\
+	 N elég nagy, habár drága összegyűjteni az $y_n$-eket\\
+	 f és l megfelelően vannak megválasztva\\
+	 $\theta$ közel esik a paraméter globális optimumához\\
+	 A $\theta$ megtalálása egy nemkonvex optimalizálási feladat: a $\theta$ globális optimumát megtalálni NP-teljes probléma, de ez nem célunk, mert túl mohó módszert kapnánk (túltanulás).\\
+	 Az a cél, hogy az f($\theta$,x) kiszámítása gyors legyen; nem baj, ha az ehhez megfelelő $\theta$ megtalálása lassú, hiszen ezt a tanító minták segítségével előre számoljuk ki.\\
+	 
+	 \subsection{K legközelebbi szomszéd}
+	 A tanító mintákból konstruált f függvény egy tetszőleges x$\in$X bemenethez a minták kimenetei közül annak a K darabnak az átlagát rendeli, amelyek bemenetei az x-hez legközelebb esnek:\\
+	 f($\theta$,x) = $\sum_{n=1}^{N}$$\frac{||(x_n az egyike az x-hez legkozelebb eso K darab tanito minta inputjainak)}{K}$ *$y_n$\\
+	 a $\theta$ paraméter egyfelől maguk az {($y_n$,$y_n$) $|$ n=1..N} minták, amit nem kell optimalizálni, másfelől a K$\in$Nm amit előre kell rögzíteni.\\
+	 a legközelebbi szomszédokat az $|$$x_n$-x$|$$^2_2$	 távolságok sorba rendezésével választjuk ki\\
+	 előny: egyszerű leprogramozni\\
+	 hátrány: ha N nagy, a tárolás, és a minták sorba rendezése erőforrásigényes.\\
+	 
+	 \subsection{Döntési fa}
+	 Tegyük fel, hogy a $\theta$:X$\rightarrow$Y leképezésben minden x$\in$X bemenetek ismerjük ugyanazon tulajdonságait (attribútumait).\\
+	 Képzeljük el azt az irányított fát, amelynek:\\
+	 -belső csúcsai egy-egy attribútumot szimbolizálnak, az abból kivezető élek pedig ezen attribútum lehetséges értékeivel címkézettek, így ágai attribútum-érték párok sorozatát írják le,\\
+	 -leveleihez azon tíntó minták részhalmaza tartozik, amelyek attribútumai a levélhez vezető út által kijelölt értékekkel rendelkeznek.\\ \\
+	 Egy döntési fa birtokában megállapíthatjuk, hogy egy x bemenet a fa melyik levelére képződik le, és ekkor a levélhez tartozó tanító minták kimenetei alapján becsülhetjük az x-hez tartozó kimenetet.\\
+	 
+	 \subsection{Példa}
+	 Elfogadjuk-e a megajánlott vizsgajegyet?\\
+	 -Ha az ötös, akkor feltétlenül.\\
+	 -Ha négyes és kevés vizsgánk van és értettük az előadást, akkor nem; feltéve, hogy a tárgy nem a mesterséges intelligencia.\\
+	 -Ha hármas és az átlagot kell javítanunk, akkor nem.\\
+	 -stb.\\ \\
+	 Attribútumok:\\
+	 -hányast ajánlottak meg (1,2,3,4,5)\\
+	 -kevés vizsgánk van-e (igen,nem)\\
+	 -kell-e átlagot javítani?(igen,nem)\\
+	 -az MI tárgyról van-e szó?(igen,nem)\\
+	 -értettük-e az előadást?(igen,nem)\\
+	 
+	 \subsection{Döntési fa felépítése}
+	 A döntési fát egy ($x_n$,$y_n$)(n=1..N) tanító mintahalmaz segítségével építjük fel (ahol $y_n$=$\theta$($x_n$)) úgy, hogy az optimális, azaz minél tömörebb, tehát egy-egy ága minél rövidebb legyen.\\
+	 -Az építés során a csúcsokhoz a tanító minták egy részhalmaza tartozik, amelyet a csúcshoz választott attribútum diszjunkt darabokra vág szét, és a csúcs gyermekei kapják meg.\\
+	 Egy levélcsúcs értékét a csúcshoz tartozó tanító minták kimenetrei(azok átlaga vagy leggyakoribb értéke) adják.\\
+	 Egy tanító mintahalmazhoz több, azt kifejező döntési fa is megadható.\\
+	 A legkisebb döntési fa megadása egy NP-teljes probléma.
+	 
+	 \subsection{Heurisztika}
+	 A döntési fa minél tömörebb, egy-egy ága minél rövidebb lesz, ha\\
+	 -egy csúcsnál a kiválasztott attribútum (a) a mintákat olyan részhalmazokra vágja szét, amelyeken belül a minták minél homogénebbek, minél kevésbé különböznek,\\
+	 -ezt valamilyen távolság fogalom (2-es norma, kereszt entrópia) alapján végezhetjük\\
+	 -vagy speciálisan lehet az a célunk, hogy a szétvágás információs előnye, azaz a szétvágás előtti minta-halmaz információ tartalmának és az utána kapott minta-részhalmazok információ tartalmának (számosságuk szerinti súlyozott) összege közti különbség minél nagyobb legyen.\\
+	 
+	 \subsection{Információ tartalom (Entrópia)}
+	 A P-beli minták információtartalma (entrópiája):\\
+	 E(P) = E($p^+$,$p^-$) = -$p^+$$log_2$$p^+$-$p^-$$log_2$$p^-$\\
+	 ahol $p^+$ a P-beli pozitív, $p^-$a negatív minták aránya ($p^+$+$p^-$=1)\\
+	 Példa:\\
+	 -Ha P-ben 2 pozitív és 3 negatív minta van:\\
+	 E(P) = E(2/5, 3/5) = 0.97\\
+	 -Ha P-ben 0 pozitív és 3 negatív minta van:\\
+	 E(P) = E(0/3, 3/3) = 0\\
+	 
+	 \subsection{Információs előny számítása}
+	 C(P,a) = E(P) -$\sum_{v\in Ertek(a)}^{}$ $\frac{|P\textsubscript{a=v}|}{|P|}$ E(P$\textsubscript{a=v}$)\\
+	 ahol P a szülő csúcs mintái, a a választott attribútum,\\
+	 az Érték(a) az a attribútum által felvett értékek, és \\
+	 a P$\textsubscript{a=v}$ = {p$\in$P $|$ p.a=v}
+	 	
+	 \subsection{A második lépés előkészítése}
+	 E({2,4,5,9,10,12}) = E(2/4,4/6) = 0.92\\
+	 Más, Bár, P/Sz, Éhes, Ár, Eső, Fogl, Fajt, Idő\\
+	 Ha a Más attribútumot választjuk, akkor a minták 1:5 arányban ketté válnak: {9} (Más=hamis), és {2,4,5,10,12} (Más=igaz)\\
+	 E({9})=E(0/1, 1/1)=0\\
+	 E({2,4,5,10,12})=E(2/5,3/5)=0.97\\
+	 Az információs előny: C({2,4,5,9,10,12},Más) = E({2,4,5,9,10,12})-(1/6E({9}))+5/6E({2,4,5,10,12}) = E(2/6, 4/6)-(1/6 E(0/1,1/1) + 5/6E(2/5,3/5))=0.92-0.81=0.11
+	 
+	 \subsection{Készítsünk algoritmust}
+	 Egy fokozatosan épülő döntési fában\\
+	 - a belső csúcsok attribútumokkal címkézettek, amelyekből az attribútum lehetséges értékei szerint vezetnek ki élek\\
+	 -ideiglenes (címkézettlen) levélcsúcsok, amelyek rendelkeznek a tanító minták egy P részhalmazával, és a választható (a csúcshoz vezető út csúcsainak címkéiben még nem szereplő) A attribútumokkal\\
+	 -a végleges (a csúcshoz tartozó minták válaszainak átlagával címkézett) levélcsúcsok
+	 
+	 \subsection{Algoritmus}
+	 Kezdetben a fa egy címkézetlen (gyökér) csúcsból áll, amelyhez az összes mintát és attribútumot rendeljük.\\
+	 Veszünk egy címkézetlen csúcsot:\\
+	 1. Ha A=$\oslash$, akkor levélcsúcsot kaptunk, amelynek értéke a csúcshoz tartozó P.\\
+	 2. Ha P=$\oslash$, akkor levélcsúcsot kaptunk, amelynek értékét a szülőcsúcs mináinak halmaza adja.\\
+	 3. Ha P csupa azonos kimenetű mintákból áll, akkor levélcsúcsnál vagyunk.\\
+	 4. Egyébként a legnagyobb információs előnnyel járó, még választható a$\in$A attribútumot rendeljük az adott csúcshoz, majd generáljuk összes gyerekét: \\
+	 a) ezekhez az a lehetséges értékeivel címkézett élek vezetnek.\\
+	 b) Ha az a címkéjű csúcsból egy gyerekcsúcsába a v címkéjű él vezet, akkor az ahhoz rendelt\\
+	 minták: P$\textsubscript{a=v}$={p$\in$P$|$p.a=v}\\
+	 választható attribútumok: A=A-{a}\\
+	 c) Végül minden gyerekre ismételjük meg rekurzív módon az 1-4 pontokat.\\
+	 
+	 \subsection{Megjegyzés}
+	 Zaj: Két vagy több eltérő besorolású minta attribútum-értékei megegyeznek.\\
+	 Túlzott illeszkedés: Például a kocka dobásra annak színe és dátuma alapján értelmetlen szabályszerűségeket találunk.\\
+	 -Megoldás a lényegtelen attribútumok (C(P,a)~0) félreállítása.\\
+	 Általánosítások:\\
+	 -Hiányzó adatok (attribútum értékek) problémája\\
+	 -Sok-értékű attribútumok\\
+	 -Folytonos értékű attribútumok
+	 
+	 \subsection{Tanulás döntési fával}
+	 Egy x$\in$X bemenethez azon tanító minták kimeneteinek átlagát rendeli, amely minták az előzetesen felépített döntési fában az x-re kiszámolt levélcsúcshoz tartoznak.\\
+	  f($\theta$,x) = $\sum_{n=1}^{N}$$\frac{||(az x-re kiszamolt levelcsucs K' darab tanito mintajanak egyike az x_n)}{K'}$ *$y_n$\\
+	  Itt a $\theta$ a döntési fa, optimalizálása a fa mohó felépítése\\
+	  előny: jól értelmezhető (a mintákra tökéletes eredményt, a mintákhoz hasonló inputokra többnyire jó eredményt ad); a tanító minták helyett csak a döntési fát tárolja, x-re adott eredmény gyorsan számolható\\
+	  hátrány: a faépítés NP-teljes, mohó módszerrel csak lokálisan optimális.\\
+	  
+	  \subsection{Véletlen erdő}
+	  K darab döntési fát építünk fel a tanító minták alapján úgy, hogy egy-egy fa építéséhez a tanító mintáknak is, és a minták attribútumainak is csak egy-egy véletlen kiválasztott részhalmazát használjuk fel. (Bizonyos minták és bizonyos attribútumok ugyanis félrevezetőek lehetnek.)Ez lesz a véletlen erdő.\\
+	  Egy véletlen erdő minden fájában külön-külön megállapíthatjuk, hogy egy tetszőleges x$\in$X bemenet a döntési fa melyik levelére képződik le. Ezen levelekhez tartozó tanító mintahalmazok kimeneteinek súlyozott átlagával becsüljük az x kimenetét.
+	  
+	  \subsection{Tanulás véletlen erdővel}
+	  Egy x bemenethez tartozó kimenetet a minták kimeneteinek aszerinti súlyozott átlaga adja, hogy egy $x_n$ minta a véletlen erdő K darab döntési fájának x-re kiszámolt levélcsúcsaihoz tartozó mintahalmazok közül hányba esik bele, és az a halmaz hány elemű:\\
+	   f($\theta$,x) = $\sum_{n=1}^{N}$$\sum_{k=1}^{K}$$\frac{||k-adik fa x-re kiszamolt levelcsucsahoz tartozo K_k(x) darab minta egyike az x_n)}{K*K_k(x)}$ *$y_n$\\
+	   A $\theta$ maga a véletlen erdő, optimalizálása annak felépítése.\\
+	   Előny: a tanító minták helyett csak az erdőt kell tárolni; a véletlen generálás miatt kevésbé mohó, elkerüli a túltanulást; az x-re adott eredmény számolása párhuzamosítható\\
+	   Hátrány: az eredmény kevésbé értelmezhető; az erdő-építés NP-teljes\\
+	 
+	 	
 		
+	
 \end{document}
 
 
