@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  14 MAY 2019 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.25)  20 MAY 2019 09:10
 entering extended mode
 **./Mesterseges_Intelligencia.tex
 (Mesterseges_Intelligencia.tex
@@ -65,28 +65,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--36
 
  []
 
+[1
 
-Overfull \hbox (6.55624pt too wide) in paragraph at lines 38--41
+{C:/Users/mvass/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (6.55624pt too wide) in paragraph at lines 39--42
 \OT1/cmr/m/n/10 Egy utkeresesi problemaban a problemater el-e-meit egy ol
 yan elsulyozott iranytott
  []
 
 
-Overfull \hbox (11.52727pt too wide) in paragraph at lines 38--41
+Overfull \hbox (11.52727pt too wide) in paragraph at lines 39--42
 \OT1/cmr/m/n/10 A megoldast en-nek megfelel}oen vagy egy celcsucs, vagy egy 
 startcsucsbol celcsucsba
  []
 
 
-Overfull \hbox (2.52846pt too wide) in paragraph at lines 38--41
+Overfull \hbox (2.52846pt too wide) in paragraph at lines 39--42
 \OT1/cmr/m/n/10 Szamos olyan mod-ellez}o modszert is-merunk, amely a kit}uz
 ott fe-lada-tot utkeresesi
  []
 
-[1
 
-{C:/Users/mvass/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (23.78601pt too wide) in paragraph at lines 43--59
+Overfull \hbox (23.78601pt too wide) in paragraph at lines 44--60
 \OT1/cmr/m/n/10 -ut koltsege $\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 c($\OML/cm
 m/m/it/10 $\OT1/cmr/m/n/10 )=c$[]$(n,m) := $\OML/cmm/m/it/10 $$[]$\OT1/cmr/m/
 n/10 c(n$[]$,$\OML/cmm/m/it/10 n[]$\OT1/cmr/m/n/10 ) ha $\OML/cmm/m/it/10 $ \O
@@ -96,608 +96,608 @@ T1/cmr/m/n/10 = $\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 n=$\OML/cmm/m/it/10 n[]$\OT
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--59
+Underfull \hbox (badness 10000) in paragraph at lines 44--60
 
  []
 
-
-Overfull \hbox (9.80617pt too wide) in paragraph at lines 61--74
+[2]
+Overfull \hbox (9.80617pt too wide) in paragraph at lines 63--76
 \OT1/cmr/m/n/10 Minden utkeresesi problema ren-delkezik egy (a problema mod
 -ellezeseb}ol szarmazo)
  []
 
 
-Overfull \hbox (8.47295pt too wide) in paragraph at lines 61--74
+Overfull \hbox (8.47295pt too wide) in paragraph at lines 63--76
 \OT1/cmr/m/n/10 -minden lepesben nem-determinisztikus modon uj aktualis cs
 ucso(ka)t valasztanak
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--74
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
-[2]
-Overfull \hbox (21.66748pt too wide) in paragraph at lines 76--87
+
+Overfull \hbox (21.66748pt too wide) in paragraph at lines 78--89
 \OT1/cmr/m/n/10 -alkalmazhato szabalyok: keresesi szabalyok, megvaltoztatj
 ak a globalis munkaterulet
  []
 
 
-Overfull \hbox (25.63963pt too wide) in paragraph at lines 76--87
+Overfull \hbox (25.63963pt too wide) in paragraph at lines 78--89
 \OT1/cmr/m/n/10 -SELECT: vezerlesi strategia, al-ka-lmazhato szabalyok ko
 zul kivalaszt egy "megfelel}ot" 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--100
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
+Underfull \hbox (badness 10000) in paragraph at lines 98--102
 
- ("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
+
+("C:\Users\mvass\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--144
-
- []
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
 
 [4]
-Overfull \hbox (8.38968pt too wide) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 123--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--147
+
+ []
+
+
+Overfull \hbox (8.38968pt too wide) in paragraph at lines 149--150
 \OT1/cmr/m/n/10 formacioval egesztjuk ki, vagy az in-varians szigorta
 saval sz}uktjuk az allapotteret. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-
-Overfull \hbox (7.4729pt too wide) in paragraph at lines 153--157
+[5]
+Overfull \hbox (7.4729pt too wide) in paragraph at lines 156--160
 \OT1/cmr/m/n/10 akkor az ere-deti reprezentacios graf helyett an-nak fava 
 ki-egyenestett valtozataban
  []
 
 
-Overfull \hbox (0.69524pt too wide) in paragraph at lines 159--161
+Overfull \hbox (0.69524pt too wide) in paragraph at lines 162--164
 \OT1/cmr/m/n/10 Egy problema dekom-ponalasa soran a problemat reszprobl
 emakra bon-tjuk, majd
  []
 
 
-Overfull \hbox (33.6952pt too wide) in paragraph at lines 159--161
+Overfull \hbox (33.6952pt too wide) in paragraph at lines 162--164
 \OT1/cmr/m/n/10 Sokszor egy problema megoldasat akar tobbfelekeppen is f
 el lehet bon-tani reszproblemak
  []
 
-[5]
-Overfull \hbox (3.13965pt too wide) in paragraph at lines 172--181
+
+Overfull \hbox (3.13965pt too wide) in paragraph at lines 175--184
 |  \OT1/cmr/m/n/10 hiszen valaszthatunk, hogy melyik elkoteg menten old-jun
 k meg egy problemat. 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 213--218
 
  []
 
 
-Overfull \hbox (1.90341pt too wide) in paragraph at lines 216--218
+Overfull \hbox (1.90341pt too wide) in paragraph at lines 220--222
 \OT1/cmr/m/n/10 bejarasok olyan kozonseges iranytott utak, ame-lyek cs
 ucsai az ere-deti []ES/VAGY
  []
 
 
-Overfull \hbox (10.19518pt too wide) in paragraph at lines 223--229
+Overfull \hbox (10.19518pt too wide) in paragraph at lines 227--233
 \OT1/cmr/m/n/10 -heurisztikus (a fe-la-dattol szarmazo, an-nak mod-elljeben
  nem rogztett, a megoldast 
  []
 
-[7]
-Overfull \hbox (21.63956pt too wide) in paragraph at lines 235--239
+[8]
+Overfull \hbox (21.63956pt too wide) in paragraph at lines 240--244
 \OT1/cmr/m/n/10 csucsat (aktualis csucs) es an-nak sz}uk kornyezetet ta
 rolja (a globalis munkateruleten). 
  []
 
 
-Overfull \hbox (10.80612pt too wide) in paragraph at lines 241--252
+Overfull \hbox (10.80612pt too wide) in paragraph at lines 246--257
 \OT1/cmr/m/n/10 Csak er}os heurisztika eseten lesz sik-eres: kulonben "elte
 ved" (nem talal megoldast),
  []
 
 
-Overfull \hbox (5.02847pt too wide) in paragraph at lines 241--252
+Overfull \hbox (5.02847pt too wide) in paragraph at lines 246--257
 \OT1/cmr/m/n/10 Lokalis op-ti-mum hely korul vagy ek-vidis-z-tans feluleten
  (azonos ertek}u szomszedos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--252
+Underfull \hbox (badness 10000) in paragraph at lines 246--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--252
+Underfull \hbox (badness 10000) in paragraph at lines 246--257
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 254--269
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--269
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 260--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--269
+Underfull \hbox (badness 10000) in paragraph at lines 260--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--269
+Underfull \hbox (badness 10000) in paragraph at lines 260--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--275
+Underfull \hbox (badness 10000) in paragraph at lines 260--275
 
  []
 
 
-Overfull \hbox (39.63861pt too wide) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
+
+ []
+
+
+Overfull \hbox (39.63861pt too wide) in paragraph at lines 283--286
 \OT1/cmr/m/n/10 Egy csucs elfo-gadasanak valoszn}useget az elfo-gadasi
  keplet kitev}ojenek T egyutthatojaval
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 293--304
-
- []
-
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 314--323
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--356
+Underfull \hbox (badness 10000) in paragraph at lines 299--310
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 320--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 354--362
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 364--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--387
+Underfull \hbox (badness 10000) in paragraph at lines 364--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--387
-
- []
-
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 429--440
+Underfull \hbox (badness 10000) in paragraph at lines 385--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+Underfull \hbox (badness 10000) in paragraph at lines 385--393
 
  []
 
-
-Overfull \hbox (11.68022pt too wide) in paragraph at lines 456--461
-\OT1/cmr/m/n/10 Csokken}o kiertekel}o fuggveny mel-lett a GK id}or}ol id}o
-re au-tomatiku-san helyrealltja
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 435--446
 
  []
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 463--468
 
  []
 
 
-Overfull \hbox (5.88962pt too wide) in paragraph at lines 470--473
+Overfull \hbox (11.68022pt too wide) in paragraph at lines 463--468
+\OT1/cmr/m/n/10 Csokken}o kiertekel}o fuggveny mel-lett a GK id}or}ol id}o
+re au-tomatiku-san helyrealltja
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--468
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--475
+
+ []
+
+
+Overfull \hbox (5.88962pt too wide) in paragraph at lines 477--480
 \OT1/cmr/m/n/10 Heurisztikus fuggvenynek nevezzuk azt a h:N$\OMS/cmsy/m/n/10
  !$$[]$ \OT1/cmr/m/n/10 fuggvenyt, ame-lyik egy csucsnal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--473
+Underfull \hbox (badness 10000) in paragraph at lines 477--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--479
+Underfull \hbox (badness 10000) in paragraph at lines 482--486
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 481--489
-
- []
-
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 528--545
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--545
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--545
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 489--497
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 557--561
+Underfull \hbox (badness 10000) in paragraph at lines 536--553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--574
+Underfull \hbox (badness 10000) in paragraph at lines 536--553
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--553
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 577--583
+Underfull \hbox (badness 10000) in paragraph at lines 565--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 594--597
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 599--606
+Underfull \hbox (badness 10000) in paragraph at lines 571--582
 
  []
 
 [19]
-Overfull \hbox (14.32475pt too wide) in paragraph at lines 622--626
+Underfull \hbox (badness 10000) in paragraph at lines 585--591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--600
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--605
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 608--615
+
+ []
+
+
+Overfull \hbox (14.32475pt too wide) in paragraph at lines 631--635
 \OT1/cmr/m/n/10 Celja, hogy a kiertekel}o fuggveny min-den agon realis 
 erteket mu-tas-son. Megteveszt}o
  []
 
 
-Overfull \hbox (3.61165pt too wide) in paragraph at lines 622--626
+Overfull \hbox (3.61165pt too wide) in paragraph at lines 631--635
 \OT1/cmr/m/n/10 lehet egy csucsnal ez az ertek ha an-nak szul}ojenel a k
 iertekel}o fuggveny lenyegesen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--631
+Underfull \hbox (badness 10000) in paragraph at lines 637--640
 
  []
 
-[20]
-Overfull \hbox (31.00066pt too wide) in paragraph at lines 640--648
+[21]
+Overfull \hbox (31.00066pt too wide) in paragraph at lines 649--657
 \OT1/cmr/m/n/10 Visszalepeskor az eppen el-hagy-ott (gy-er-mek) csucs ert
 eke (fel-ho-zott ertek) modosthatja
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--663
+Underfull \hbox (badness 10000) in paragraph at lines 667--672
 
  []
 
 
-Overfull \hbox (1.05508pt too wide) in paragraph at lines 667--671
+Overfull \hbox (1.05508pt too wide) in paragraph at lines 676--680
 \OT1/cmr/m/n/10 A problemara ad-hato nehany lehetseges valaszt, azaz a p
 roblemater tobb egyedet
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--671
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 673--680
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 682--688
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 690--696
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 698--703
+Underfull \hbox (badness 10000) in paragraph at lines 676--680
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 705--712
+Underfull \hbox (badness 10000) in paragraph at lines 682--689
 
  []
 
 
-Overfull \hbox (4.72282pt too wide) in paragraph at lines 714--719
+Underfull \hbox (badness 10000) in paragraph at lines 691--697
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--705
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--712
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 714--721
+
+ []
+
+
+Overfull \hbox (4.72282pt too wide) in paragraph at lines 723--728
 \OT1/cmr/m/n/10 -Csonkolasos/selejtez}os: a ratermettseg sz-erint legjobb (a
 dott kuszobertek feletti)
  []
 
-
-Overfull \hbox (7.86172pt too wide) in paragraph at lines 721--725
+[24]
+Overfull \hbox (7.86172pt too wide) in paragraph at lines 731--735
 \OT1/cmr/m/n/10 -Keresztezes: veletlen kivalasztott pozcion jelc-so-por-t
 ok (genek) vagy jelek csereje. 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 727--735
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--745
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--735
+Underfull \hbox (badness 10000) in paragraph at lines 737--745
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--743
+Underfull \hbox (badness 10000) in paragraph at lines 747--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--743
+Underfull \hbox (badness 10000) in paragraph at lines 747--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--753
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 765--776
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--792
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--792
+Underfull \hbox (badness 10000) in paragraph at lines 755--763
 
  []
 
 [25]
-Overfull \hbox (8.16722pt too wide) in paragraph at lines 794--799
+Underfull \hbox (badness 10000) in paragraph at lines 775--786
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 797--803
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--803
+
+ []
+
+
+Overfull \hbox (8.16722pt too wide) in paragraph at lines 805--810
 \OT1/cmr/m/n/10 egy szul}o csucsban elvegezhet}o, az barmelyik leszarmazot
 t csucsban is elvegezhet}o.
  []
 
 
-Overfull \hbox (40.94528pt too wide) in paragraph at lines 794--799
+Overfull \hbox (40.94528pt too wide) in paragraph at lines 805--810
 []\OT1/cmr/m/n/10 Iteletkalkulusban a grafnak csak veges sok kulonboz}o c
 sucsa lehet, predikatumkalkulusban
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--809
+Underfull \hbox (badness 10000) in paragraph at lines 812--820
 
  []
 
-[26]
-Overfull \hbox (32.90819pt too wide) in paragraph at lines 812--819
+[27]
+Overfull \hbox (32.90819pt too wide) in paragraph at lines 823--830
 \OT1/cmr/m/n/10 4. Egzisz-tencialis kvan-torok kikuszobolese (nem ek-vi-va
 lens atalaktas, de kielegthet}oseg
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--838
+Underfull \hbox (badness 10000) in paragraph at lines 842--849
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--844
+Underfull \hbox (badness 10000) in paragraph at lines 851--855
 
  []
 
 
-Overfull \hbox (15.95688pt too wide) in paragraph at lines 846--849
+Overfull \hbox (15.95688pt too wide) in paragraph at lines 857--860
 \OT1/cmr/m/n/10 Egy $\OML/cmm/m/it/10 A[]$\OT1/cmr/m/n/10 ,...,$\OML/cmm/m/it/1
 0 A[]$$\OMS/cmsy/m/n/10 !$\OT1/cmr/m/n/10 C problema eseten az axiomakat k
 et cso-portba soroljuk: szabalyokra
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 851--859
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 861--867
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 869--875
-
- []
-
 [28]
-Overfull \hbox (43.0008pt too wide) in paragraph at lines 890--896
+Underfull \hbox (badness 10000) in paragraph at lines 862--870
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--878
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 880--886
+
+ []
+
+[29]
+Overfull \hbox (43.0008pt too wide) in paragraph at lines 901--907
 \OT1/cmr/m/n/10 -Egy problema meg-tanulasa ezen lekepezes kiszamtasana
 k ( vagy kozelt}o kiszamtasanak)
  []
 
 
-Overfull \hbox (3.67659pt too wide) in paragraph at lines 898--901
+Overfull \hbox (3.67659pt too wide) in paragraph at lines 909--912
 \OT1/cmr/m/n/10 kimenetet; a mintak il-letve az azokra kiszamolt kimenetek k
 ozotti osszefuggeseket
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 904--911
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 915--922
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--919
+Underfull \hbox (badness 10000) in paragraph at lines 924--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--927
+Underfull \hbox (badness 10000) in paragraph at lines 932--938
 
  []
 
-
-Overfull \hbox (6.99849pt too wide) in paragraph at lines 929--934
+[31]
+Overfull \hbox (6.99849pt too wide) in paragraph at lines 941--946
 \OT1/cmr/m/n/10 Tegyuk fel, hogy a $\OML/cmm/m/it/10 $\OT1/cmr/m/n/10 :X$\OMS
 /cmsy/m/n/10 !$\OT1/cmr/m/n/10 Y lekepezesben min-den x$\OMS/cmsy/m/n/10 2$\O
 T1/cmr/m/n/10 X be-menetek is-merjuk ugyana-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--934
+Underfull \hbox (badness 10000) in paragraph at lines 941--946
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--934
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 936--947
+Underfull \hbox (badness 10000) in paragraph at lines 941--946
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--947
+Underfull \hbox (badness 10000) in paragraph at lines 948--959
 
  []
 
 
-Overfull \hbox (27.77856pt too wide) in paragraph at lines 956--960
+Underfull \hbox (badness 10000) in paragraph at lines 948--959
+
+ []
+
+
+Overfull \hbox (27.77856pt too wide) in paragraph at lines 968--972
 \OT1/cmr/m/n/10 vagja szet, ame-lyeken belul a mintak minel ho-mogenebbek
 , minel kevesbe kulonboznek, 
  []
 
 
-Overfull \hbox (12.41737pt too wide) in paragraph at lines 956--960
+Overfull \hbox (12.41737pt too wide) in paragraph at lines 968--972
 \OT1/cmr/m/n/10 -ezt valam-i-lyen tavolsag fo-ga-lom (2-es norma, kereszt ent
 ropia) alapjan vegezhetjuk 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--960
+Underfull \hbox (badness 10000) in paragraph at lines 968--972
 
  []
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 962--970
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 974--982
 
  []
 
 
-Overfull \hbox (50.27878pt too wide) in paragraph at lines 978--984
+Overfull \hbox (50.27878pt too wide) in paragraph at lines 990--996
 \OT1/cmr/m/n/10 Az in-formacios el}ony: C(2,4,5,9,10,12,Mas) = E(2,4,5,9,10,
 12)-(1/6E(9))+5/6E(2,4,5,10,12)
  []
 
-
-Overfull \hbox (13.05624pt too wide) in paragraph at lines 986--990
+[33]
+Overfull \hbox (13.05624pt too wide) in paragraph at lines 999--1003
 \OT1/cmr/m/n/10 - a bels}o csucsok at-tributumokkal cmkezettek, ame-lyekb}
 ol az at-tributum lehetseges
  []
 
 
-Overfull \hbox (5.22171pt too wide) in paragraph at lines 986--990
+Overfull \hbox (5.22171pt too wide) in paragraph at lines 999--1003
 \OT1/cmr/m/n/10 egy P reszhalmazaval, es a valaszthato (a csucshoz vezet}
 o ut csucsainak cmkeiben
  []
 
 
-Overfull \hbox (13.97289pt too wide) in paragraph at lines 986--990
+Overfull \hbox (13.97289pt too wide) in paragraph at lines 999--1003
 \OT1/cmr/m/n/10 -a vegleges (a csucshoz tar-tozo mintak valaszainak atlag
 aval cmkezett) levelcsucsok 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 992--1003
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1016
 
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1014--1019
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1033
 
  []
 
 
-Overfull \hbox (19.38972pt too wide) in paragraph at lines 1021--1023
+Overfull \hbox (19.38972pt too wide) in paragraph at lines 1035--1037
 \OT1/cmr/m/n/10 Egy veletlen erd}o min-den fajaban kulon-kulon megallap
 thatjuk, hogy egy tetsz}oleges
  []
 
-[33]
-Overfull \hbox (28.4885pt too wide) in paragraph at lines 1025--1030
+
+Overfull \hbox (28.4885pt too wide) in paragraph at lines 1039--1044
 \OT1/cmr/m/n/10 f($\OML/cmm/m/it/10 $\OT1/cmr/m/n/10 ,x) = $[][]$$[][]$$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1044
 
  []
 
-[34] (Mesterseges_Intelligencia.aux) ) 
+[35] (Mesterseges_Intelligencia.aux) ) 
 Here is how much of TeX's memory you used:
  243 strings out of 492945
  3139 string characters out of 3126252
@@ -720,9 +720,9 @@ rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mvass/AppData
 mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pf
 b><C:/Users/mvass/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb>
-Output written on Mesterseges_Intelligencia.pdf (34 pages, 231082 bytes).
+Output written on Mesterseges_Intelligencia.pdf (35 pages, 231488 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

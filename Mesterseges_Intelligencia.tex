@@ -34,6 +34,7 @@
 	-Adott pillanatban elérhető elemek rangsorolása.\\
 	-Kiinduló elem kijelölése.\\
 	
+	\newpage
 	\subsection{Útkeresési probléma}
 	Egy útkeresési problémában a problématér elemeit egy olyan élsúlyozott irányított gráf csúcsai vagy útjai szimbolizálják, amelyik gráf nem feltétlenül véges, de a csúcsainak kifoka véges, és van egy közös pozitív alsó korlátja az élek súlyának (költségének) ($\delta$-gráf).\\
 	A megoldást ennek megfelelően vagy egy célcsúcs, vagy egy startcsúcsból célcsúcsba vezető út (esetleg a legolcsóbb ilyen) megtalálása szolgáltatja.\\
@@ -57,6 +58,7 @@
 	-opt. költségű út n$\rightarrow$*m :=$min_c$$\{$$\alpha$$|$ $\alpha$$\in$$\{$n$\rightarrow$m$\}$ $\}$ \\
 	-opt. költségű út n$\rightarrow$*M :=$min_c$$\{$$\alpha$$|$ $\alpha$$\in$$\{$n$\rightarrow$M$\}$ $\}$ \\
 	
+	\newpage
 	\subsection{Gráfreprezentáció fogalma}
 	Minden útkeresési probléma rendelkezik egy (a probléma modellezéséből származó) gráfreprezentációval, ami egy (R,s,T) hármas, amelyben:\\
 	-R=(N,A,c) $\delta$-gráf az ún. reprezentációs gráf,\\
@@ -116,6 +118,7 @@
 	\underline{Művelet:}Rak(honnan,hova): AT$\rightarrow$AT honnan, hova $\in$ \{1,2,3\}\\
 	HA a honnan és hova \underline{létezik} és \underline{nem azonos}, és \underline{van korong} a honnan rúdon, és a hova rúd \underline{üres} vagy a mozgatandó korong (honnan rúd felső korongja) \underline{kisebb}, mint a hova rúd felső korongja, AKKOR this[honnan legfelső korongja] := hova
 	
+	\newpage
 	\subsection{Állapottér-reprezentáció gráf-reprezentációja}
 	\underline{$\delta$-gráf} ~ állapot-gráf\\
 	-csúcs: állapot\\
@@ -205,6 +208,7 @@
 	 \hspace*{1em}-minden csúcs elérhető az n csúcsból egy közönséges irányított úton.\\
 	 A megoldás-gráf egy olyan hiper-út, amely a startcsúcsból csupa célcsúcsba vezet.
 	 
+	 \newpage
 	 \subsection{Hiper-út bejárása}
 	 Az n$\rightarrow$M hiper-út egy bejárásán a hiper-út csúcsaiból képzett sorozatoknak a felsorolását értjük:\\
 	 \hspace*{1em} -első sorozat: $<$n$>$\\
@@ -231,6 +235,7 @@
 	 -nemmódosítható (lokális keresések, evolúciós algoritmus, rezolúció)\\
 	 -módosítható (visszalépéses keresések, gráfkeresések)
 	 
+	 \newpage
 	 \subsection{Lokális keresések}
 	 A lokális keresés olyan KR, amely a probléma reprezentációs gráfjának egyetlen csúcsát (aktuális csúcs) és annak szűk környezetét tárolja (a globális munkaterületén).\\
 	 Kezdetben az aktuális csúcs a startcsúcs, és a keresés akkor áll le, ha az aktuális csúcs a célcsúcs lesz.\\
@@ -250,6 +255,7 @@
 	 Segíthet ha:\\
 	 \hspace*{0,5em} -növeljük a memóriát (tabu search)\\ \\
 	 
+	 \newpage
 	 \subsection{Tabu keresés}
 	 A globális munkaterületén az aktuális csúcson (akt) kívül nyilvántartja még:\\
 	 \hspace*{0,5em} -az utolsó néhány érintett csúcsot: Tabu halmaz\\
@@ -452,6 +458,7 @@
 	 11:\hspace{1em} G:=G $\cup$ {(n,m)$\in$A $|$ m $\in$$\gamma$(n)-$\pi$(n)}\\
 	 12: endloop
 	 
+	 \newpage
 	 \subsection{Működés és eredmény}
 	 A GK $\delta$-gráfban a működése során egy csúcsot legfeljebb véges sokszor terjeszt ki. (Ebből következik például, hogy körökre nem érzékeny)\\
 	 A GK véges $\delta$-gráfban mindig terminál.\\
@@ -477,6 +484,7 @@
 	 Megengedhető (admissible): h(n) $\leq$h*(n) $\forall$n$\in$N\\
 	 Monoton megszorítás: h(n)-h(m) $\leq$c(n,m) $\forall$(n,m)$\in$A (következetes)\\
 	 
+	 \newpage
 	 \subsection{A memória igény vizsgálata}
 	 $ZART_s$ ~az S gráfkereső algoritmus által lezárt (kiterjesztett csúcsok halmaza)\\
 	 Rögzítsünk egy feladatot és két, X ésé Y gráfkereső algoritmust\\
@@ -595,6 +603,7 @@
 	 Az optimális lépés helyett a soron következő jó lépést keressük. Legyen a bennünket képviselő játékos neve mostantól MAX az ellenfélé pedig MIN.\\
 	 Ehhez az aktuális állapotból indulva kell a játékfa néhány szintjét felépíteni, ezen a részfa leveleinek számunkra való hasznosságát megbecsülni, majd ez alapján a soron következő lépést meghatározni.\\
 	 
+	 \newpage
 	 \subsection{Kiértékelő függvény}
 	 Minden esetben szükségünk van egy olyan heurisztikára, amely a mi szempontunkból becsüli meg egy állás hasznosságát: f: Állások $\Rightarrow$ [-1000, 1000] függvény.\\
 	 Példák: \\
@@ -717,6 +726,7 @@
 	 -Versengő: véletlenül kiválasztott egyedcsoportok (pl. párok) legjobb egyedét választja ki.\\
 	 -Csonkolásos/selejtezős: a rátermettség szerint legjobb (adott küszöbérték feletti) valahány egyedből véletlenszerűen választ néhányat.
 	 
+	 \newpage
 	 \subsection{Rekombináció}
 	 A feladata az, hogy adott szülő-egyedekből olyan utódokat hozzon létre, amelyek a szüleik tulajdonságait "öröklik".\\
 	 -Keresztezés: véletlen kiválasztott pozíción jelcsoportok (gének) vagy jelek cseréje.\\
@@ -782,6 +792,7 @@
 	 vagy: (!p$\vee$q)$\wedge$(!q$\vee$r)$\wedge$(!s$\vee$!r)$\wedge$p$\wedge$s kielégíthetetlen\\
 	 Tehát meg kell mutatnunk, hogy bármelyik interpretációval (igazságértékeléssel) legalább az egyik klóz hamis lesz.
 	 
+	 \newpage
 	 \subsection{Rezolúció = Indirekt bizonyítás}
 	 Tekintsük a klózok halmazát és tegyük fel indirekt módon, hogy van olyan interpretáció, amikor mindegyik klóz igaz.\\
 	 Ekkor például p is, és $\neg$p$\vee$q is igaz. Ha azonban p igaz, akkor !p hamis, és ekkor a $\neg$p$\vee$q csak úgy lehet igaz, ha a q is igaz.\\
@@ -925,6 +936,7 @@
 	 előny: egyszerű leprogramozni\\
 	 hátrány: ha N nagy, a tárolás, és a minták sorba rendezése erőforrásigényes.\\
 	 
+	 \newpage
 	 \subsection{Döntési fa}
 	 Tegyük fel, hogy a $\theta$:X$\rightarrow$Y leképezésben minden x$\in$X bemenetek ismerjük ugyanazon tulajdonságait (attribútumait).\\
 	 Képzeljük el azt az irányított fát, amelynek:\\
@@ -982,6 +994,7 @@
 	 E({2,4,5,10,12})=E(2/5,3/5)=0.97\\
 	 Az információs előny: C({2,4,5,9,10,12},Más) = E({2,4,5,9,10,12})-(1/6E({9}))+5/6E({2,4,5,10,12}) = E(2/6, 4/6)-(1/6 E(0/1,1/1) + 5/6E(2/5,3/5))=0.92-0.81=0.11
 	 
+	 \newpage
 	 \subsection{Készítsünk algoritmust}
 	 Egy fokozatosan épülő döntési fában\\
 	 - a belső csúcsok attribútumokkal címkézettek, amelyekből az attribútum lehetséges értékei szerint vezetnek ki élek\\
@@ -1010,6 +1023,7 @@
 	 -Sok-értékű attribútumok\\
 	 -Folytonos értékű attribútumok
 	 
+	 \newpage
 	 \subsection{Tanulás döntési fával}
 	 Egy x$\in$X bemenethez azon tanító minták kimeneteinek átlagát rendeli, amely minták az előzetesen felépített döntési fában az x-re kiszámolt levélcsúcshoz tartoznak.\\
 	  f($\theta$,x) = $\sum_{n=1}^{N}$$\frac{||(az x-re kiszamolt levelcsucs K' darab tanito mintajanak egyike az x_n)}{K'}$ *$y_n$\\
